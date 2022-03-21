@@ -1,0 +1,100 @@
+* {
+  outline: none !important;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.8em;
+  overflow-x: hidden;
+  font-size: $font-size-primary;
+  color: $color-primary;
+  font-family: $font-family-text;
+  font-weight:400;
+  word-break: break-word;
+  @include flexbox();
+  @include flex-direction(column);
+}
+
+.sticky-footer {
+  flex: 1 0 auto;
+}
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.row {
+  margin-left: -10px;
+  margin-right: -10px;
+
+  > * {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 15px;
+  font-weight: 700;
+  color: $color-title;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  @include transition();
+
+  &:hover {
+    color: $color-hover;
+  }
+}
+
+p {
+  margin: 0 0 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
