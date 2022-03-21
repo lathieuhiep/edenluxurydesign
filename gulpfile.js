@@ -17,7 +17,7 @@ gulp.task('compile-scss-to-css', function () {
             outputStyle: 'expanded'
         }).on('error', sass.logError))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./assets/css/'));
+        .pipe(gulp.dest('./'));
 });
 
 // Task compress mini css

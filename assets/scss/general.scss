@@ -1,3 +1,43 @@
+@font-face {
+  font-family: 'SVN-Aguda';
+  src: url('assets/fonts/svn-aguda/SVN-AgudaLight.woff2') format('woff2'),
+  url('assets/fonts/svn-aguda/SVN-AgudaLight.woff') format('woff'),
+  url('assets/fonts/svn-aguda/SVN-AgudaLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Aguda';
+  src: url('assets/fonts/svn-aguda/SVN-Aguda.woff2') format('woff2'),
+  url('assets/fonts/svn-aguda/SVN-Aguda.woff') format('woff'),
+  url('assets/fonts/svn-aguda/SVN-Aguda.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Aguda';
+  src: url('assets/fonts/svn-aguda/SVN-AgudaBold.woff2') format('woff2'),
+  url('assets/fonts/svn-aguda/SVN-AgudaBold.woff') format('woff'),
+  url('assets/fonts/svn-aguda/SVN-AgudaBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SVN-Aguda';
+  src: url('assets/fonts/svn-aguda/SVN-AgudaBlack.woff2') format('woff2'),
+  url('assets/fonts/svn-aguda/SVN-AgudaBlack.woff') format('woff'),
+  url('assets/fonts/svn-aguda/SVN-AgudaBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   outline: none !important;
 }
@@ -10,7 +50,7 @@ body {
   min-height: 100vh;
   line-height: 1.8em;
   overflow-x: hidden;
-  font-size: $font-size-primary;
+  font-size: 16px;
   color: $color-primary;
   font-family: $font-family-text;
   font-weight:400;
@@ -97,4 +137,11 @@ img {
 
 iframe {
   max-width: 100%;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
 }

@@ -1,0 +1,198 @@
+.header {
+  background-color: rgba(10, 10, 10, 0.9);
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  &__top {
+    padding: 14px 100px 12px;
+    font-size: 14px;
+    border-bottom: 1px solid #2B2B2B;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(space-between);
+
+    .left {
+      color: #ffffff;
+
+      .info {
+        display: inline-block;
+        margin-bottom: 0;
+
+        &:not(:first-child) {
+          &:before {
+            content: "-";
+          }
+        }
+
+        a {
+          color: $color-hover;
+        }
+
+        .phone {
+          display: inline-block;
+
+          a {
+            display: inline-block;
+
+            &:not(:first-child) {
+              &:before {
+                content: "-";
+                padding-right: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      @include flexbox();
+      @include align-items(center);
+      grid-gap: 24px;
+
+      .nav-top {
+        ul {
+          li {
+            position: relative;
+            display: inline-block;
+            padding-left: 16px;
+            padding-right: 16px;
+            line-height: 1.5em;
+
+            &:first-child {
+              padding-left: 0;
+            }
+
+            &:last-child {
+              padding-right: 0;
+            }
+
+            &:not(:first-child) {
+              &:before {
+                position: absolute;
+                content: "";
+                top: 50%;
+                left: 0;
+                width: 1px;
+                height: 76%;
+                background-color: #4E4A4A;
+                @include transform(translateY(-50%));
+              }
+            }
+
+            a {
+              display: inline-block;
+              color: $color-sub;
+              font-size: 14px;
+
+              &:hover {
+                color: $color-hover;
+              }
+            }
+          }
+        }
+      }
+
+      .search-box {
+        position: relative;
+
+        .form-control {
+          border: 1px solid #3D3D3D;
+          background-color: transparent;
+          border-radius: 20px;
+          padding: 0 30px 0 18px;
+          font-size: 14px;
+          line-height: 2em;
+          color: #B8B8B8;
+        }
+
+        .btn-submit {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          border: none;
+          color: #B6B6B6;
+          font-size: 12px;
+          padding: 0 16px 0 0;
+          background-color: transparent;
+        }
+      }
+
+      .social-network {
+        @include flexbox();
+        grid-gap: 16px;
+
+        a {
+          display: block;
+          width: 24px;
+          height: 24px;
+          line-height: 24px;
+          text-align: center;
+          color: #ffffff;
+          font-size: 12px;
+          border-radius: 50%;
+        }
+
+        &__facebook {
+          background-color: #1877F2;
+        }
+
+        &__pinterest {
+          background-color: #E60023;
+        }
+      }
+    }
+  }
+
+  .nav-primary {
+    padding: 14px 100px 13px;
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 1fr 100px 1fr;
+    @include align-items(center);
+
+    ul {
+      @include flexbox();
+      grid-gap: 48px;
+
+      li {
+        position: relative;
+
+        a {
+          display: block;
+          color: #C7C7C7;
+          font-size: 14px;
+          line-height: 1.5em;
+          text-transform: uppercase;
+
+          &:hover {
+            color: $color-hover;
+          }
+        }
+
+        &:not(:first-child) {
+          &:before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: -24px;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #C4C4C4;
+            @include transform(translateY(-50%));
+          }
+        }
+      }
+    }
+
+    &__left {
+      @include justify-content(flex-end)
+    }
+  }
+}
