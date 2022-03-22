@@ -12,6 +12,11 @@ Description: EdenLuxuryDesign HTML
 *
 # General
 # Header
+# Element
+ ## Banner
+ ## Project Tabs
+ ## About
+# Footer
 # Responsive
 * -----------------------------------------------------------------------------
 */
@@ -27,6 +32,16 @@ Description: EdenLuxuryDesign HTML
 # Header
 -----------------------------------------------------------------------------*/
 @import "header";
+
+/**
+# Element
+-----------------------------------------------------------------------------*/
+@import "element/element";
+
+/**
+# Footer
+-----------------------------------------------------------------------------*/
+@import "footer";
 
 /**
 # Responsive
