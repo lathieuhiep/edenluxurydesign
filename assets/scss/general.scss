@@ -145,3 +145,46 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.pt-60 {
+  padding-top: 60px;
+}
+
+.title-element {
+  margin-bottom: 40px;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.owl-carousel {
+  .owl-dots {
+    margin-top: 30px;
+    text-align: center;
+
+    .owl-dot {
+      margin: 0 10px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #C4C4C4;
+      @include transition();
+
+      &.active,
+      &:hover {
+        background-color: $background-primary;
+      }
+
+      span {
+        display: block;
+      }
+    }
+  }
+}
