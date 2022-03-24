@@ -7,6 +7,26 @@
 
     $( document ).ready( function () {
 
+        // project slider tab
+        const projectSliderTab = $('.project-slider-tab');
+
+        if ( projectSliderTab.length ) {
+            projectSliderTab.each(function () {
+
+                $(this).owlCarousel({
+                    items: 1,
+                    loop: true,
+                    margin: 18,
+                    nav: false,
+                    dots: true,
+                    navSpeed: 800,
+                    dotsSpeed: 800,
+                    dragEndSpeed: 800
+                })
+
+            })
+        }
+
         // service slider
         const elementServicePost = $('.element-service__post');
 
@@ -20,6 +40,9 @@
                     margin: 18,
                     nav: false,
                     dots: true,
+                    navSpeed: 800,
+                    dotsSpeed: 800,
+                    dragEndSpeed: 800,
                     responsive:{
                         0:{
                             items: 1
