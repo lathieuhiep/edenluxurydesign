@@ -87,6 +87,46 @@
 
         }
 
+        // partner
+        const elementPartner = $('.element-partner');
+
+        if ( elementPartner.length ) {
+
+            elementPartner.each(function () {
+                $(this).owlCarousel({
+                    loop: true,
+                    margin: 40,
+                    nav: false,
+                    dots: true,
+                    navSpeed: 800,
+                    dotsSpeed: 800,
+                    dragEndSpeed: 800,
+                    responsive:{
+                        0:{
+                            items: 1,
+                            margin: 0,
+                        },
+                        480:{
+                            items: 2,
+                            margin: 12,
+                        },
+                        576:{
+                            items: 3,
+                            margin: 12,
+                        },
+                        768:{
+                            items: 5,
+                            margin: 12,
+                        },
+                        992:{
+                            items: 6
+                        }
+                    }
+                })
+            })
+
+        }
+
     });
 
 } )(jQuery);

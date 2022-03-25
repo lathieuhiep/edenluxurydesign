@@ -158,10 +158,20 @@ input[type="search"]::-webkit-search-results-decoration {
   padding-top: 60px;
 }
 
+.pb-60 {
+  padding-bottom: 60px;
+}
+
 .title-element {
   margin-bottom: 40px;
   font-size: 28px;
   text-transform: uppercase;
+}
+
+.space {
+  margin: 35px 0;
+  height: 1px;
+  background-color: #DDDDDD;
 }
 
 .owl-carousel {

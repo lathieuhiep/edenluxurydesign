@@ -1,0 +1,15 @@
+.element-partner {
+  .owl-stage {
+    @include flexbox();
+    @include align-items(center);
+  }
+
+  .item {
+    text-align: center;
+
+    img {
+      width: auto;
+      display: inline-block;
+    }
+  }
+}
