@@ -12,6 +12,7 @@ Description: EdenLuxuryDesign HTML
 *
 # General
 # Header
+# Breadcrumb
 # Element
  ## Banner
  ## Project Tabs
@@ -24,6 +25,12 @@ Description: EdenLuxuryDesign HTML
  ## Post Grid
  ## Partner
  ## Subscribe
+ ## About Text
+ ## Benefit
+ ## FAQ
+ ## Post Detail
+ ## Design Grid
+ ## Pricing Table
 # Footer
 # Responsive
 * -----------------------------------------------------------------------------
@@ -40,6 +47,11 @@ Description: EdenLuxuryDesign HTML
 # Header
 -----------------------------------------------------------------------------*/
 @import "header";
+
+/**
+# Breadcrumb
+-----------------------------------------------------------------------------*/
+@import "breadcrumb";
 
 /**
 # Element

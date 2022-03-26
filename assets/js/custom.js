@@ -127,6 +127,20 @@
 
         }
 
+        // show content post
+        const postContentText = $('.post-content__text');
+
+        if ( postContentText.length ) {
+            const heightPostContent = postContentText[0].scrollHeight;
+
+            $('.add-view-post').on('click', function (event) {
+                event.preventDefault();
+
+                postContentText.animate({'height': heightPostContent});
+                $(this).closest('.post-content').find('.action-box').remove();
+            })
+        }
+
     });
 
 } )(jQuery);

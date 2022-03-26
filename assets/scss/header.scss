@@ -1,10 +1,13 @@
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
   background-color: rgba(10, 10, 10, 0.9);
+
+  &.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
 
   ul {
     list-style: none;
@@ -191,6 +194,12 @@
             border-radius: 50%;
             background-color: #C4C4C4;
             @include transform(translateY(-50%));
+          }
+        }
+
+        &.active {
+          a {
+            color: $color-hover;
           }
         }
       }

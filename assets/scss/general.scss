@@ -38,6 +38,26 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('assets/fonts/helvetica-neue/HelveticaNeue-Medium.woff2') format('woff2'),
+  url('assets/fonts/helvetica-neue/HelveticaNeue-Medium.woff') format('woff'),
+  url('assets/fonts/helvetica-neue/HelveticaNeue-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('assets/fonts/helvetica-neue/HelveticaNeue.woff2') format('woff2'),
+  url('assets/fonts/helvetica-neue/HelveticaNeue.woff') format('woff'),
+  url('assets/fonts/helvetica-neue/HelveticaNeue.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   outline: none !important;
 }
