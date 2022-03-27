@@ -1,10 +1,13 @@
 .breadcrumbs {
   position: relative;
-  padding: 60px 0;
+  height: 325px;
+  padding-bottom: 62px;
   background-image: url(assets/images/bk-banner.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  @include flexbox();
+  @include align-items(flex-end);
 
   &:before {
     position: absolute;

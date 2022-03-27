@@ -31,6 +31,11 @@ Description: EdenLuxuryDesign HTML
  ## Post Detail
  ## Design Grid
  ## Pricing Table
+ ## Timeline
+ ## Contact
+# Project Detail
+# Blog
+# Page
 # Footer
 # Responsive
 * -----------------------------------------------------------------------------
@@ -57,6 +62,21 @@ Description: EdenLuxuryDesign HTML
 # Element
 -----------------------------------------------------------------------------*/
 @import "element/element";
+
+/**
+# Project Detail
+-----------------------------------------------------------------------------*/
+@import "project-detail";
+
+/**
+# Blog
+-----------------------------------------------------------------------------*/
+@import "blog";
+
+/**
+# Page
+-----------------------------------------------------------------------------*/
+@import "page";
 
 /**
 # Footer

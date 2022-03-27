@@ -1,0 +1,41 @@
+.project-detail {
+  .title-post {
+    font-size: 28px;
+  }
+
+  .info {
+    .item {
+      margin-bottom: 10px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: 16px;
+      @include align-items(center);
+    }
+  }
+
+  .feature {
+    .lSAction {
+      > a {
+        width: auto;
+        height: auto;
+        color: #ffffff;
+        font-size: 30px;
+        opacity: 1;
+        background-image: none;
+        @include transition();
+
+        &:hover {
+          color: $color-hover;
+        }
+      }
+
+      > .lSPrev {
+        left: 16px;
+      }
+
+      > .lSNext {
+        right: 16px;
+      }
+    }
+  }
+}

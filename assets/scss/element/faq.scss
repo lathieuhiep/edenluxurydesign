@@ -74,6 +74,10 @@
           border-radius: 50%;
         }
 
+        &:not(.collapsed)::after {
+          content: "\f068";
+        }
+
         span {
           display: inline-block;
           padding-right: 36px;
@@ -85,4 +89,12 @@
       padding: 0 35px 14px;
     }
   }
+}
+
+.element-right-faq {
+  height: 100%;
+  background-image: url("assets/images/member-group.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
