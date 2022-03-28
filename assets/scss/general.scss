@@ -289,3 +289,24 @@ input[type="search"]::-webkit-search-results-decoration {
     }
   }
 }
+
+.chat-group {
+  position: fixed;
+  top: 50%;
+  right: 24px;
+  z-index: 99;
+  @include transform(translateY(-50%));
+
+  a {
+    display: block;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      @include transform(scale(1.1));
+    }
+  }
+}

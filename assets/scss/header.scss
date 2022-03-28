@@ -101,6 +101,12 @@
                 color: $color-hover;
               }
             }
+
+            &.active {
+              > a {
+                color: $color-hover;
+              }
+            }
           }
         }
       }
@@ -213,7 +219,7 @@
         }
 
         &.active {
-          a {
+          > a {
             color: $color-hover;
           }
         }
