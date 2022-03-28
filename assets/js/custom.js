@@ -184,6 +184,24 @@
             })
         }
 
+        // Contact Gallery
+        const contactGallerySlider = $('.contact-gallery-slider');
+        if ( contactGallerySlider.length ) {
+            contactGallerySlider.each(function () {
+                $(this).lightSlider({
+                    gallery: true,
+                    item: 1,
+                    loop: true,
+                    thumbItem: 9,
+                    slideMargin: 27,
+                    enableDrag: false,
+                    currentPagerPosition: 'left',
+                    prevHtml: '<i class="fa-solid fa-chevron-left"></i>',
+                    nextHtml: '<i class="fa-solid fa-chevron-right"></i>'
+                });
+            })
+        }
+
     });
 
 } )(jQuery);

@@ -240,3 +240,52 @@ input[type="search"]::-webkit-search-results-decoration {
     }
   }
 }
+
+.hide-nav-default {
+  .lSAction {
+    a {
+      width: auto;
+      height: auto;
+      color: #ffffff;
+      font-size: 30px;
+      opacity: 1;
+      background-image: none;
+      @include transition();
+
+      &.lSPrev {
+        left: 16px;
+      }
+
+      &.lSNext {
+        right: 16px;
+      }
+
+      &:hover {
+        color: $color-hover;
+      }
+    }
+  }
+}
+
+.lSSlideOuter {
+  .lSPager {
+    &.lSGallery {
+      li {
+        overflow: hidden;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        @include transition();
+
+        img {
+          width: 100%;
+          max-width: none;
+        }
+
+        &.active,
+        &:hover {
+          border-color: $border-color;
+        }
+      }
+    }
+  }
+}
