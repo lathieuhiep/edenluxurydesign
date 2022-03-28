@@ -158,30 +158,24 @@
   }
 
   .nav-primary {
-    padding: 14px 100px 13px;
+    padding: 0 100px;
     display: grid;
     grid-gap: 24px;
     grid-template-columns: 1fr 100px 1fr;
     @include align-items(center);
 
-    ul {
+    .logo {
+      padding: 14px 0;
+    }
+
+    > ul {
       @include flexbox();
       grid-gap: 48px;
+      height: 100%;
 
-      li {
-        position: relative;
-
-        a {
-          display: block;
-          color: #C7C7C7;
-          font-size: 14px;
-          line-height: 1.5em;
-          text-transform: uppercase;
-
-          &:hover {
-            color: $color-hover;
-          }
-        }
+      > li {
+        @include flexbox();
+        @include align-items(center);
 
         &:not(:first-child) {
           &:before {
@@ -197,9 +191,91 @@
           }
         }
 
+        > a {
+          color: #C7C7C7;
+          font-size: 14px;
+          line-height: 1.5em;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    ul {
+      li {
+        position: relative;
+
+        a {
+          display: block;
+
+          &:hover {
+            color: $color-hover;
+          }
+        }
+
         &.active {
           a {
             color: $color-hover;
+          }
+        }
+
+        &:hover {
+          > ul {
+            top: 100%;
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+
+        ul {
+          position: absolute;
+          top: 120%;
+          left: 0;
+          min-width: 264px;
+          padding: 15px 33px 18px 16px;
+          z-index: 10;
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+          border-radius: 8px;
+          background-color: #ffffff;
+          visibility: hidden;
+          opacity: 0;
+          @include transition();
+
+          li {
+            position: relative;
+            @include transition();
+
+            &:before {
+              position: absolute;
+              content: "";
+              width: 5px;
+              height: 5px;
+              top: 50%;
+              left: 0;
+              opacity: 0;
+              border-radius: 50%;
+              background-color: $background-primary;
+              @include transform(translateY(-50%));
+              @include transition();
+            }
+
+            a {
+              font-size: 14px;
+              line-height: 1.5em;
+              font-weight: 700;
+              white-space: nowrap;
+            }
+
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+
+            &:hover {
+              padding-left: 12px;
+
+              &:before {
+                opacity: 1;
+              }
+            }
           }
         }
       }
