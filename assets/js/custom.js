@@ -7,6 +7,38 @@
 
     $( document ).ready( function () {
 
+        /* btn mobile Start*/
+        let subMenuToggle  =   $('.sub-menu-toggle');
+
+        if ( subMenuToggle.length ) {
+
+            subMenuToggle.each(function () {
+                $(this).on( 'click', function () {
+                    const widthScreen = $(window).width();
+
+                    if ( widthScreen < 992 ) {
+                        $(this).toggleClass('active');
+                        $(this).closest( '.menu-item-has-children' ).siblings().find( subMenuToggle ).removeClass( 'active' );
+                        $(this).parent().children( '.sub-menu' ).slideToggle();
+                        $(this).parents( '.menu-item-has-children' ).siblings().find( '.sub-menu' ).slideUp();
+                    }
+
+                } )
+            })
+
+        }
+        /* btn mobile End */
+
+        // action button mobile search
+        const btnSearchMobile = $('.btn-search-mobile');
+        if ( btnSearchMobile.length ) {
+            btnSearchMobile.on('click', function (event) {
+                event.preventDefault();
+
+                $(this).closest('.right-box').find('.search-box ').fadeToggle();
+            })
+        }
+
         // project slider tab
         const projectSliderTab = $('.project-slider-tab');
         if ( projectSliderTab.length ) {
@@ -262,5 +294,18 @@
         }
 
     });
+
+    // Offcanvas menu mobile
+    const myOffcanvas = document.getElementById('menu-mobile');
+    const bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
+
+    $(window).on('resize', function () {
+        const widthScreen = $(window).width();
+
+        if ( widthScreen >= 992 ) {
+            bsOffcanvas.hide();
+        }
+
+    })
 
 } )(jQuery);

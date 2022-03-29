@@ -1,5 +1,224 @@
 @media (min-width: 1400px) {
+
   .container {
     max-width: 1220px;
   }
+
+}
+
+@media (min-width: 992px) {
+
+  .header {
+    background-color: rgba(10, 10, 10, 0.9);
+
+    &.absolute {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+
+    &__top {
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(space-between);
+    }
+
+    .nav-primary {
+      padding: 0 100px;
+
+      > ul {
+        @include flexbox();
+        grid-gap: 48px;
+        height: 100%;
+      }
+
+      .logo {
+        padding: 14px 0;
+      }
+
+      .right-box {
+        .search-box {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 991px) {
+
+  .header {
+    background-color: rgba(0,0,0,0.9);
+
+    &__top {
+      display: none;
+    }
+
+    .nav-primary {
+      padding: 0 15px;
+
+      &__left,
+      &__right {
+        display: none;
+      }
+
+      .logo {
+        padding: 20px 0;
+      }
+
+      .btn-menu-mobile,
+      .btn-search-mobile {
+        color: #ffffff;
+        font-size: 20px;
+      }
+
+      .right-box {
+        position: relative;
+
+        .search-box {
+          position: absolute;
+          display: none;
+          top: 100%;
+          right: 0;
+          z-index: 10;
+          @include transform(translateY(26px));
+
+          input {
+            padding: 6px 30px 6px 12px;
+            width: 230px;
+            border: none;
+            border-radius: 0;
+          }
+
+          .btn-submit {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            border: none;
+            padding: 0 12px 0 0;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-mobile {
+    background-color: #000000;
+
+    .offcanvas-header {
+      padding: 28px 24px;
+      @include align-items(flex-start);
+
+      .btn-close-menu {
+        color: #ffffff;
+        font-size: 24px;
+      }
+    }
+
+    .offcanvas-body {
+      padding: 0 24px 28px;
+      > ul {
+        > li {
+          padding-bottom: 12px;
+          margin-bottom: 12px;
+          border-bottom: 1px solid rgba(196, 196, 196, 0.2);
+
+          > a {
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #E0E0E0;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+            border-bottom: 0;
+          }
+        }
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          a {
+            &:hover {
+              color: $color-hover;
+            }
+          }
+
+          ul {
+            display: none;
+            padding-left: 8px;
+            padding-top: 8px;
+
+            li {
+              position: relative;
+              padding-left: 18px;
+              margin-bottom: 8px;
+
+              &:before {
+                position: absolute;
+                content: "";
+                top: 12px;
+                left: 0;
+                width: 4px;
+                height: 4px;
+                background-color: #B9B9B9;
+                border-radius: 50%;
+              }
+
+              a {
+                color: #B9B9B9;
+              }
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+
+          &.menu-item-has-children {
+            @include flexbox();
+            @include flex-wrap(wrap);
+
+            > a {
+              @include flex(1);
+            }
+
+            .sub-menu-toggle {
+              color: #E0E0E0;
+              @include flex(0 0 auto);
+
+              &:after {
+                content: "\f078";
+                display: inline-block;
+                font-family: "Font Awesome 5 Free",serif;
+                font-style: normal;
+                font-weight: 900
+              }
+
+              &.active {
+                &:after {
+                  @include transform(rotate(180deg));
+                }
+              }
+            }
+
+            .sub-menu {
+              width: 100%;
+              @include flex(0 0 auto);
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
