@@ -9,6 +9,7 @@
         position: relative;
         padding: 0;
         cursor: pointer;
+        text-align: center;
 
         img {
           @include transition();
@@ -21,6 +22,16 @@
             visibility: hidden;
             @include transform(translateX(-50%));
           }
+        }
+
+        span {
+          margin-top: 12px;
+          display: block;
+          font-size: 14px;
+          font-weight: 900;
+          color: $color-title;
+          text-transform: uppercase;
+          @include transition();
         }
 
         &.active {
@@ -39,6 +50,10 @@
               opacity: 1;
               visibility: visible;
             }
+          }
+
+          span {
+            color: $color-hover;
           }
         }
       }

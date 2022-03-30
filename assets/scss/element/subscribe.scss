@@ -7,14 +7,15 @@
 }
 
 .element-subscribe {
-  @include flexbox();
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+  max-width: 930px;
+  margin: 0 auto;
   @include align-items(center);
-  @include justify-content(center);
-  grid-gap: 140px;
+
 
   .left {
-    @include flex(0 0 auto);
-
     .heading {
       margin-bottom: 8px;
       font-size: 28px;
@@ -28,9 +29,6 @@
   }
 
   .right {
-    width: 440px;
-    @include flex(0 0 auto);
-
     .subscribe {
       position: relative;
 

@@ -14,14 +14,11 @@
 
             subMenuToggle.each(function () {
                 $(this).on( 'click', function () {
-                    const widthScreen = $(window).width();
 
-                    if ( widthScreen < 992 ) {
-                        $(this).toggleClass('active');
-                        $(this).closest( '.menu-item-has-children' ).siblings().find( subMenuToggle ).removeClass( 'active' );
-                        $(this).parent().children( '.sub-menu' ).slideToggle();
-                        $(this).parents( '.menu-item-has-children' ).siblings().find( '.sub-menu' ).slideUp();
-                    }
+                    $(this).toggleClass('active');
+                    $(this).closest( '.menu-item-has-children' ).siblings().find( subMenuToggle ).removeClass( 'active' );
+                    $(this).parent().children( '.sub-menu' ).slideToggle();
+                    $(this).parents( '.menu-item-has-children' ).siblings().find( '.sub-menu' ).slideUp();
 
                 } )
             })
@@ -58,6 +55,13 @@
             })
         }
 
+        // project tabs mobile
+        $('.item-tab-dropdown-project').on('click', '.nav-link', function () {
+            const cloneTab = $(this).children().clone();
+
+            $(this).closest('.element-project-tabs-mobile').find('.dropdown-project-mobile').empty().append( cloneTab );
+        })
+
         // service slider
         const elementServicePost = $('.element-service__post');
         if ( elementServicePost.length ) {
@@ -89,8 +93,14 @@
                         const first = owlItemActive[0];
                         const last = owlItemActive[owlItemActive.length - 2];
 
-                        first.classList.add('overlay');
-                        last.classList.add('overlay');
+                        if ( first !== undefined ) {
+                            first.classList.add('overlay');
+                        }
+
+                        if ( last !== undefined ) {
+                            last.classList.add('overlay');
+                        }
+
                     },
                     onDrag: function () {
                         const owlItem = $this.find('.owl-item');

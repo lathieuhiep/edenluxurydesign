@@ -11,6 +11,10 @@
       grid-template-columns: 200px 1fr;
       grid-gap: 40px;
 
+      img {
+        width: 100%;
+      }
+
       .tex-box {
         .title {
           margin-bottom: 37px;
