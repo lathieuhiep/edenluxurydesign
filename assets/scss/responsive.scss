@@ -119,6 +119,16 @@
     }
   }
 
+  .site-footer {
+    .site-info {
+      &__company {
+        .contact {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
 }
 
 @media (min-width: 992px) {
@@ -218,6 +228,7 @@
   }
 
   .menu-mobile {
+    bottom: 62px;
     background-color: #000000;
 
     .offcanvas-header {
@@ -454,6 +465,55 @@
 
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+
+  .site-footer {
+    .footer-widgets-block {
+      &:after {
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .element-price-list {
+    .box {
+      grid-gap: 30px;
+    }
+  }
+
+  .site-footer {
+    .site-info {
+      padding-bottom: 30px;
+
+      &__company {
+        .contact {
+          @include flex-direction(column);
+
+          .item {
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .element-services-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+}
+
 @media (max-width: 767px) {
 
   .element-about {
@@ -471,6 +531,236 @@
           }
         }
       }
+    }
+  }
+
+  .element-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    .item {
+      &:nth-child(3n+3) {
+        grid-column-end: span 2;
+      }
+    }
+  }
+
+  .element-subscribe {
+    max-width: none;
+
+    .left {
+      .heading {
+        font-size: 22px;
+      }
+
+      .text {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .site-footer {
+    @include flexbox();
+    @include flex-direction(column);
+
+    .footer-widgets-block {
+      padding-top: 16px;
+      @include order(2);
+
+      &:after {
+        display: none;
+      }
+
+      .row {
+        > * {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    .site-info {
+      padding-top: 24px;
+      padding-bottom: 0;
+      text-align: left !important;
+      @include order(1);
+
+      &__company {
+        .name {
+          font-size: 16px;
+        }
+
+        .contact {
+          font-size: 14px;
+          @include flex-direction(column);
+
+          .item {
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .copyright {
+        display: none;
+      }
+    }
+
+    aside {
+      blockquote {
+        padding-left: 12px;
+      }
+
+      &.widget_nav_menu {
+        ul {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+
+  .container {
+    width: 100%;
+    max-width: none;
+  }
+
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .element-price-list {
+    .box {
+      grid-gap: 24px;
+
+      .link {
+        padding: 12px 24px;
+        font-size: 14px;
+      }
+
+      .content {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+
+  .sub-text-box-width {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .service-tabs {
+    .nav {
+      padding-left: 32px;
+      padding-right: 32px;
+      grid-gap: 72px;
+
+      .nav-item {
+        &:not(:first-child) {
+          &:before {
+            left: -36px;
+          }
+        }
+      }
+    }
+  }
+
+  .element-price-list {
+    .box {
+      .link {
+        @include flex(0 0 auto);
+      }
+
+      .content {
+        @include flex(1);
+      }
+    }
+  }
+
+}
+
+@media (max-width: 575px) {
+
+  .title-element {
+    font-size: 20px;
+  }
+
+  .text-desc {
+    font-size: 12px;
+  }
+
+  .row-col-mobile {
+    margin-left: -4px;
+    margin-right: -4px;
+
+    .col {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+  }
+
+  .service-tabs {
+    .nav {
+      grid-gap: 30px;
+
+      .nav-item {
+        &:not(:first-child) {
+          &:before {
+            left: -15px;
+          }
+        }
+      }
+    }
+  }
+
+  .element-price-list {
+    .box {
+      @include flex-wrap(wrap);
+      grid-gap: 24px;
+
+      .content {
+        text-align: center;
+        font-size: 24px;
+      }
+    }
+  }
+
+  .element-post-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .element-team-member {
+    .item {
+      &__thumb {
+        overflow: hidden;
+        height: 250px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &__info {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .element-image-box {
+    grid-template-columns: 1fr;
+  }
+
+  .element-subscribe {
+    grid-template-columns: 1fr;
+
+    .left {
+      text-align: center;
     }
   }
 

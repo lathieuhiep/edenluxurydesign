@@ -314,3 +314,35 @@ input[type="search"]::-webkit-search-results-decoration {
     }
   }
 }
+
+.group-action-mobile {
+  position: sticky;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: #ffffff;
+
+  .box {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 6px;
+    @include align-items(flex-end);
+
+    a {
+      display: inline-block;
+
+      span {
+        display: block;
+        color: #666666;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      &.phone {
+        @include transform(translateY(-16px));
+      }
+    }
+  }
+}

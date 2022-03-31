@@ -7,6 +7,13 @@
 
     $( document ).ready( function () {
 
+        /* Start back top */
+        $('#back-top').on( 'click', function (e) {
+            e.preventDefault();
+            $('html').scrollTop(0);
+        } );
+        /* End back top */
+
         /* btn mobile Start*/
         let subMenuToggle  =   $('.sub-menu-toggle');
 
@@ -68,8 +75,10 @@
 
             elementServicePost.each(function () {
                 const $this = $(this);
+                const number_item = 5;
 
                 $this.owlCarousel({
+                    items: number_item,
                     loop: true,
                     margin: 18,
                     nav: false,
@@ -77,21 +86,14 @@
                     navSpeed: 800,
                     dotsSpeed: 800,
                     dragEndSpeed: 800,
-                    responsive:{
-                        0:{
-                            items: 1
-                        },
-                        600:{
-                            items: 3
-                        },
-                        1000:{
-                            items: 5
-                        }
-                    },
                     onInitialized: function () {
                         const owlItemActive = $this.find('.owl-item.active');
                         const first = owlItemActive[0];
-                        const last = owlItemActive[owlItemActive.length - 2];
+                        let last = owlItemActive[owlItemActive.length - 2];
+
+                        if ( owlItemActive.length === number_item ) {
+                            last = owlItemActive[owlItemActive.length - 1];
+                        }
 
                         if ( first !== undefined ) {
                             first.classList.add('overlay');
@@ -115,7 +117,7 @@
                         const first = owlItemActive[0];
                         let last = owlItemActive[owlItemActive.length - 2];
 
-                        if ( owlItemActive.length === 5 ) {
+                        if ( owlItemActive.length === number_item ) {
                             last = owlItemActive[owlItemActive.length - 1];
                         }
 
@@ -134,31 +136,31 @@
             elementPartner.each(function () {
                 $(this).owlCarousel({
                     loop: true,
-                    margin: 40,
                     nav: false,
-                    dots: true,
+                    dots: false,
+                    margin: 12,
                     navSpeed: 800,
                     dotsSpeed: 800,
                     dragEndSpeed: 800,
+                    autoplaySpeed: 800,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
                     responsive:{
                         0:{
-                            items: 1,
-                            margin: 0,
+                            items: 2
                         },
                         480:{
-                            items: 2,
-                            margin: 12,
-                        },
-                        576:{
-                            items: 3,
-                            margin: 12,
+                            items: 3
                         },
                         768:{
-                            items: 5,
-                            margin: 12,
+                            items: 4
                         },
                         992:{
-                            items: 6
+                            items: 5
+                        },
+                        1024:{
+                            items: 6,
+                            margin: 40
                         }
                     }
                 })
