@@ -322,6 +322,32 @@
             })
         }
 
+        // element-design-grid-owl
+        const elementDesignGridOwl = $('.element-design-grid-owl');
+        if ( elementDesignGridOwl.length ) {
+            elementDesignGridOwl.each(function () {
+                $(this).owlCarousel({
+                    loop: true,
+                    nav: false,
+                    dots: false,
+                    navSpeed: 800,
+                    dotsSpeed: 800,
+                    dragEndSpeed: 800,
+                    responsive:{
+                        0: {
+                            items: 2,
+                            center: true,
+                            margin: 8
+                        },
+                        768: {
+                            items: 3,
+                            margin: 24
+                        }
+                    }
+                })
+            })
+        }
+
     });
 
     // Offcanvas menu mobile
