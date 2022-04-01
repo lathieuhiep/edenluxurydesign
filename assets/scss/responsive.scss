@@ -63,6 +63,63 @@
     }
   }
 
+  .element-benefit {
+    .item {
+      padding-bottom: 30px;
+
+      .stt {
+        padding-bottom: 30px;
+        font-size: 70px;
+      }
+
+      .desc {
+        padding-right: 30px;
+        text-align: justify;
+      }
+    }
+
+    .col:first-child {
+      .item {
+        .stt {
+          right: -15px;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 1199px) {
+
+  .element-benefit {
+    padding-right: 20px;
+
+    .item {
+      padding: 24px 20px;
+
+      .stt {
+        font-size: 50px;
+        margin: 0;
+        padding: 0;
+        top: 50%;
+        right: -15px;
+        @include transform(translateY(-50%));
+      }
+
+      .desc {
+        padding-right: 0;
+      }
+    }
+
+    .col:first-child {
+      .item {
+        .stt {
+          right: -15px;
+        }
+      }
+    }
+  }
+
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -160,6 +217,14 @@
         }
       }
     }
+  }
+
+  .element-section-about {
+    background-color: #FBF9F7;
+  }
+
+  .group-action-mobile {
+    display: none;
   }
 
 }
@@ -342,6 +407,17 @@
     }
   }
 
+  .breadcrumbs {
+    height: 130px;
+    padding-bottom: 0;
+    @include align-items(center);
+  }
+
+  .text-box {
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+
   .element-banner {
     height: 480px;
 
@@ -463,6 +539,10 @@
     }
   }
 
+  .chat-group {
+    display: none;
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -555,6 +635,27 @@
       .text {
         font-size: 12px;
       }
+    }
+  }
+
+  .element-benefit {
+    .item {
+      border-width: 2px;
+    }
+  }
+
+  .element-faq {
+    .accordion {
+      .accordion-header,
+      .accordion-body {
+        padding-left: 22px;
+      }
+    }
+  }
+
+  .element-post-detail {
+    .title-post {
+      font-size: 22px;
     }
   }
 
@@ -761,6 +862,33 @@
 
     .left {
       text-align: center;
+    }
+  }
+
+  .element-post-detail {
+    .meta {
+      grid-gap: 12px;
+      @include flex-direction(column);
+
+      .left {
+        @include order(2)
+      }
+
+      .right {
+        @include order(1);
+      }
+    }
+  }
+
+  .element-design-grid {
+    .item {
+      .content {
+        .title-post {
+          a {
+            font-size: 12px;
+          }
+        }
+      }
     }
   }
 
