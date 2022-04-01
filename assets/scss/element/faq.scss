@@ -24,11 +24,13 @@
       position: relative;
       padding-left: 35px;
       margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 1.9em;
 
       &:before {
         position: absolute;
         content: "";
-        top: 18px;
+        top: 12px;
         left: 0;
         width: 14px;
         height: 14px;
@@ -39,7 +41,7 @@
       &:after {
         position: absolute;
         content: "";
-        top: 21px;
+        top: 15px;
         left: 3px;
         width: 8px;
         height: 8px;
@@ -47,12 +49,13 @@
         background-color: $color-hover;
       }
 
-      button {
+      a {
+        display: inline-block;
         position: relative;
         width: auto;
         padding: 0;
-        font-size: 18px;
-        font-weight: 700;
+        font-size: inherit;
+        line-height: inherit;
         color: #000000;
         border: none;
         background-color: transparent;
@@ -60,7 +63,7 @@
         &:after {
           position: absolute;
           content: "\2b";
-          top: 0;
+          top: 6px;
           right: 0;
           width: 24px;
           height: 24px;
@@ -79,7 +82,8 @@
         }
 
         span {
-          display: inline-block;
+          position: relative;
+          display: block;
           padding-right: 36px;
         }
       }

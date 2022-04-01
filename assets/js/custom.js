@@ -305,6 +305,23 @@
 
         }
 
+        // project slider mobile
+        const projectSliderMobile = $('.project-slider-mobile');
+        if ( projectSliderMobile.length ) {
+            projectSliderMobile.each(function () {
+                $(this).owlCarousel({
+                    items: 1,
+                    loop: true,
+                    margin: 8,
+                    nav: false,
+                    dots: true,
+                    navSpeed: 800,
+                    dotsSpeed: 800,
+                    dragEndSpeed: 800
+                })
+            })
+        }
+
     });
 
     // Offcanvas menu mobile

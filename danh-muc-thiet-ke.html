@@ -75,6 +75,13 @@
         </div>
 
         <nav class="nav-primary">
+            <!-- Button show menu on mobile -->
+            <div class="left-box d-lg-none">
+                <a class="btn-menu-mobile" data-bs-toggle="offcanvas" href="#menu-mobile">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+
             <ul class="nav-primary__left">
                 <li>
                     <a href="index.html">Trang chủ</a>
@@ -112,7 +119,8 @@
             </ul>
 
             <a class="logo" href="#">
-                <img src="assets/images/logo.png" alt="logo">
+                <img class="d-none d-lg-block" src="assets/images/logo.png" alt="logo" width="100" height="100">
+                <img class="d-lg-none" src="assets/images/logo-mobile.png" alt="logo" width="120" height="41">
             </a>
 
             <ul class="nav-primary__right">
@@ -128,8 +136,116 @@
                     <a href="tin-tuc.html">Tin tức thiết kế</a>
                 </li>
             </ul>
+
+            <!-- Show search on mobile -->
+            <div class="right-box text-end d-lg-none">
+                <a href="#" class="btn-search-mobile">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+                <form class="search-box" method="get" action="">
+                    <input type="search" class="form-control" placeholder="Tìm kiếm" aria-label="Search" />
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </button>
+                </form>
+            </div>
         </nav>
     </header>
+
+    <!-- Menu show on mobile -->
+    <div class="offcanvas offcanvas-start menu-mobile d-lg-none" tabindex="-1" id="menu-mobile" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <a class="logo" href="#">
+                <img src="assets/images/logo-mobile.png" alt="logo" width="120" height="41">
+            </a>
+
+            <a href="#" class="btn-close-menu" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+        </div>
+
+        <div class="offcanvas-body">
+            <ul>
+                <li>
+                    <a href="index.html">Trang chủ</a>
+                </li>
+
+                <li class="menu-item-has-children">
+                    <a href="#">Thiết kế kiến trúc</a>
+                    <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất chung cư</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất biệt thự</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất nhà phố</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất văn phòng</a>
+                        </li>
+
+                        <li>
+                            <a href="shop.html">Thiết kế nội thất shop quần áo</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-item-has-children">
+                    <a href="danh-muc-thiet-ke.html">Thiết kế nội thất</a>
+                    <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất chung cư</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất biệt thự</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất nhà phố</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất văn phòng</a>
+                        </li>
+
+                        <li>
+                            <a href="shop.html">Thiết kế nội thất shop quần áo</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Thi công nội thất</a>
+                </li>
+
+                <li>
+                    <a href="du-an-tieu-bieu.html">Dự án tiêu biểu</a>
+                </li>
+
+                <li>
+                    <a href="tin-tuc.html">Tin tức thiết kế</a>
+                </li>
+
+                <li>
+                    <a href="gioi-thieu.html">Giới thiệu</a>
+                </li>
+
+                <li>
+                    <a href="lien-he.html">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Breadcrumb -->
     <div class="element-section">
@@ -149,7 +265,7 @@
     </div>
 
     <!-- About -->
-    <div class="element-section element-section-about pt-5 pb-30">
+    <div class="element-section element-section-about pt-5 pb-30 mb-2 mb-lg-0">
         <div class="container">
             <div class="element-about-text text-center mb-5">
                 <h2 class="title title-element mb-3">
@@ -163,7 +279,8 @@
                 </div>
             </div>
 
-            <div class="element-project-grid">
+            <!-- project grid desktop -->
+            <div class="element-project-grid d-none d-lg-block">
                 <div class="item">
                     <div class="row-item">
                         <div class="col-item">
@@ -238,11 +355,136 @@
                     </div>
                 </div>
             </div>
+
+            <!-- project grid mobile -->
+            <div class="element-mobile d-lg-none">
+                <div class="element-project-grid project-slider-mobile owl-carousel">
+                    <div class="item">
+                        <div class="row-item">
+                            <div class="col-item">
+                                <div class="item__post">
+                                    <div class="thumb">
+                                        <img src="assets/images/project/noi-that-1.jpg" alt="project">
+                                    </div>
+
+                                    <div class="content">
+                                        <h4 class="title-post">
+                                            <a href="#">Nội thất chung cư</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-item">
+                                <div class="item__post">
+                                    <div class="thumb">
+                                        <img src="assets/images/project/noi-that-2.jpg" alt="project">
+                                    </div>
+
+                                    <div class="content">
+                                        <h4 class="title-post">
+                                            <a href="#">Nội thất biệt thự</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-item">
+                                <div class="item__post">
+                                    <div class="thumb">
+                                        <img src="assets/images/project/noi-that-3.jpg" alt="project">
+                                    </div>
+
+                                    <div class="content">
+                                        <h4 class="title-post">
+                                            <a href="#">Nội thất nhà phố</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-item">
+                                <div class="item__post">
+                                    <div class="thumb">
+                                        <img src="assets/images/project/noi-that-4.jpg" alt="project">
+                                    </div>
+
+                                    <div class="content">
+                                        <h4 class="title-post">
+                                            <a href="#">Nội thất văn phòng</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="row-item">
+                            <div class="col-item">
+                                <div class="item__post">
+                                    <div class="thumb">
+                                        <img src="assets/images/project/noi-that-1.jpg" alt="project">
+                                    </div>
+
+                                    <div class="content">
+                                        <h4 class="title-post">
+                                            <a href="#">Nội thất chung cư</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-item">
+                                <div class="item__post">
+                                    <div class="thumb">
+                                        <img src="assets/images/project/noi-that-2.jpg" alt="project">
+                                    </div>
+
+                                    <div class="content">
+                                        <h4 class="title-post">
+                                            <a href="#">Nội thất biệt thự</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-item">
+                                <div class="item__post">
+                                    <div class="thumb">
+                                        <img src="assets/images/project/noi-that-3.jpg" alt="project">
+                                    </div>
+
+                                    <div class="content">
+                                        <h4 class="title-post">
+                                            <a href="#">Nội thất nhà phố</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-item">
+                                <div class="item__post">
+                                    <div class="thumb">
+                                        <img src="assets/images/project/noi-that-4.jpg" alt="project">
+                                    </div>
+
+                                    <div class="content">
+                                        <h4 class="title-post">
+                                            <a href="#">Nội thất văn phòng</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Image Box -->
-    <div class="element-section pt-60 pb-30">
+    <div class="element-section pt-60 pb-30 mb-2 mb-lg-0">
         <div class="container">
             <h2 class="title title-element text-center mb-5">
                 Chúng tôi khác biệt
@@ -313,7 +555,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
+    <div class="element-section d-none d-lg-block">
+        <div class="container">
             <div class="space"></div>
         </div>
     </div>
@@ -330,7 +576,7 @@
             </h2>
 
             <div class="element-benefit">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
                     <div class="col">
                         <div class="item">
                             <span class="stt">1</span>
@@ -394,7 +640,7 @@
     <!-- FAQ -->
     <div class="element-section element-section-faq pt-30 pb-30">
         <div class="container">
-            <div class="text-box text-center">
+            <div class="text-box text-center d-none d-lg-block">
                 Hãy để EDEN giúp bạn trả lời
                 <br />
                 những câu hỏi trước khi thiết kế ngôi nhà cho riêng
@@ -402,13 +648,17 @@
                 mình
             </div>
 
+            <div class="text-box text-center d-lg-none">
+                Hãy để EDEN giúp bạn trả lời những câu hỏi trước khi thiết kế ngôi nhà cho riêng mình
+            </div>
+
             <div class="element-faq">
                 <div class="accordion accordion-flush" id="accordionFlushExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading-1">
-                            <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-1" aria-expanded="false" aria-controls="flush-collapse-1">
+                            <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapse-1">
                                 <span>Có nên thiết kế nội thất hay không</span>
-                            </button>
+                            </a>
                         </h2>
 
                         <div id="flush-collapse-1" class="accordion-collapse collapse show" aria-labelledby="flush-heading-1" data-bs-parent="#accordionFlushExample">
@@ -420,9 +670,9 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading-2">
-                            <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-2" aria-expanded="false" aria-controls="flush-collapse-2">
+                            <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapse-2">
                                 <span>Thiết kế nội thất gồm những gì?</span>
-                            </button>
+                            </a>
                         </h2>
 
                         <div id="flush-collapse-2" class="accordion-collapse collapse" aria-labelledby="flush-heading-2" data-bs-parent="#accordionFlushExample">
@@ -434,9 +684,9 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading-3">
-                            <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-3" aria-expanded="false" aria-controls="flush-collapse-3">
+                            <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapse-3">
                                 <span>Thiết kế thi công nội thất hết bao nhiêu tiền?</span>
-                            </button>
+                            </a>
                         </h2>
 
                         <div id="flush-collapse-3" class="accordion-collapse collapse" aria-labelledby="flush-heading-3" data-bs-parent="#accordionFlushExample">
@@ -448,9 +698,9 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading-4">
-                            <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-4" aria-expanded="false" aria-controls="flush-collapse-3">
+                            <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapse-4">
                                 <span>Tôi nên sử dụng gỗ tự nhiên hay công nghiệp cho nội thất?</span>
-                            </button>
+                            </a>
                         </h2>
 
                         <div id="flush-collapse-4" class="accordion-collapse collapse" aria-labelledby="flush-heading-4" data-bs-parent="#accordionFlushExample">
@@ -462,9 +712,9 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading-5">
-                            <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-5" aria-expanded="false" aria-controls="flush-collapse-3">
+                            <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapse-5">
                                 <span>Tôi có nên tận dụng đồ dùng cũ cho nội thất mới?</span>
-                            </button>
+                            </a>
                         </h2>
 
                         <div id="flush-collapse-5" class="accordion-collapse collapse" aria-labelledby="flush-heading-5" data-bs-parent="#accordionFlushExample">
@@ -476,9 +726,9 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading-6">
-                            <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-6" aria-expanded="false" aria-controls="flush-collapse-3">
+                            <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapse-6">
                                 <span>Nội thất EDEN có xưởng sản xuất gia công trực tiếp hay không?</span>
-                            </button>
+                            </a>
                         </h2>
 
                         <div id="flush-collapse-6" class="accordion-collapse collapse" aria-labelledby="flush-heading-6" data-bs-parent="#accordionFlushExample">
@@ -490,9 +740,9 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading-7">
-                            <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-7" aria-expanded="false" aria-controls="flush-collapse-3">
+                            <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapse-7">
                                 <span>Nội thất EDEN có xưởng sản xuất gia công trực tiếp hay không?</span>
-                            </button>
+                            </a>
                         </h2>
 
                         <div id="flush-collapse-7" class="accordion-collapse collapse" aria-labelledby="flush-heading-7" data-bs-parent="#accordionFlushExample">
@@ -504,9 +754,9 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading-8">
-                            <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-8" aria-expanded="false" aria-controls="flush-collapse-3">
+                            <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapse-8">
                                 <span>Tôi đã có bản vẽ phù hợp thì EDEN có thi công được không?</span>
-                            </button>
+                            </a>
                         </h2>
 
                         <div id="flush-collapse-8" class="accordion-collapse collapse" aria-labelledby="flush-heading-8" data-bs-parent="#accordionFlushExample">
@@ -518,9 +768,9 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading-9">
-                            <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-9" aria-expanded="false" aria-controls="flush-collapse-9">
+                            <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapse-9">
                                 <span>Bên bạn nhận cải tạo nhà cũ không?</span>
-                            </button>
+                            </a>
                         </h2>
 
                         <div id="flush-collapse-9" class="accordion-collapse collapse" aria-labelledby="flush-heading-9" data-bs-parent="#accordionFlushExample">
@@ -532,9 +782,9 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading-10">
-                            <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-10" aria-expanded="false" aria-controls="flush-collapse-10">
+                            <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapse-10">
                                 <span>EDEN có thiết kế thi công theo yêu cầu không?</span>
-                            </button>
+                            </a>
                         </h2>
 
                         <div id="flush-collapse-10" class="accordion-collapse collapse" aria-labelledby="flush-heading-10" data-bs-parent="#accordionFlushExample">
@@ -546,9 +796,9 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading-11">
-                            <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-11" aria-expanded="false" aria-controls="flush-collapse-11">
+                            <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapse-11">
                                 <span>Thời gian thiết kế nội thất có lâu không?</span>
-                            </button>
+                            </a>
                         </h2>
 
                         <div id="flush-collapse-11" class="accordion-collapse collapse" aria-labelledby="flush-heading-11" data-bs-parent="#accordionFlushExample">
@@ -560,9 +810,9 @@
 
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-heading-12">
-                            <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-12" aria-expanded="false" aria-controls="flush-collapse-12">
+                            <a href="" class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapse-12">
                                 <span>Thiết kế nội thất và thiết kế kiến trúc có bắt buộc sử dụng cùng phong cách thiết kế không?</span>
-                            </button>
+                            </a>
                         </h2>
 
                         <div id="flush-collapse-12" class="accordion-collapse collapse" aria-labelledby="flush-heading-12" data-bs-parent="#accordionFlushExample">
@@ -777,6 +1027,35 @@
         </div>
     </div>
 </footer>
+
+<!-- Chat Mobile -->
+<div class="group-action-mobile">
+    <div class="box">
+        <a class="talk" href="#">
+            <img src="assets/images/icon/talk-mobile.png" alt="" width="32" height="28">
+            <span>Chat Ngay</span>
+        </a>
+
+        <a class="messenger" href="#">
+            <img src="assets/images/icon/facebook-messenger-mobile.png" alt="" width="32" height="32">
+            <span>Messenger</span>
+        </a>
+
+        <a class="phone" href="#">
+            <img src="assets/images/icon/phone-mobile.png" alt="" height="62" width="62">
+        </a>
+
+        <a class="zalo" href="#">
+            <img src="assets/images/icon/zalo-mobile.png" alt="" height="33" width="33">
+            <span>Zalo</span>
+        </a>
+
+        <a id="back-top" href="#">
+            <img src="assets/images/icon/back-top.png" alt="" height="15" width="20">
+            <span>Back top</span>
+        </a>
+    </div>
+</div>
 
 <!-- Jquery JS -->
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
