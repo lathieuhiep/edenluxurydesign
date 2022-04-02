@@ -22,6 +22,10 @@
       margin-bottom: 16px;
       overflow: hidden;
       border-radius: 8px;
+
+      img {
+        width: 100%;
+      }
     }
 
     &__content {
@@ -72,6 +76,10 @@
 
     &__thumb {
       margin-bottom: 0;
+
+      img {
+        width: 100%;
+      }
     }
 
     &:last-child {
@@ -94,6 +102,7 @@
   .pagination {
     margin-bottom: 0;
     grid-gap: 8px;
+    flex-wrap: wrap;
 
     .page-link {
       padding: 2px 13px;

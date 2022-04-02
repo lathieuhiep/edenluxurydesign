@@ -77,6 +77,13 @@
         </div>
 
         <nav class="nav-primary">
+            <!-- Button show menu on mobile -->
+            <div class="left-box d-lg-none">
+                <a class="btn-menu-mobile" data-bs-toggle="offcanvas" href="#menu-mobile">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+
             <ul class="nav-primary__left">
                 <li>
                     <a href="index.html">Trang chủ</a>
@@ -114,7 +121,8 @@
             </ul>
 
             <a class="logo" href="#">
-                <img src="assets/images/logo.png" alt="logo">
+                <img class="d-none d-lg-block" src="assets/images/logo.png" alt="logo" width="100" height="100">
+                <img class="d-lg-none" src="assets/images/logo-mobile.png" alt="logo" width="120" height="41">
             </a>
 
             <ul class="nav-primary__right">
@@ -130,8 +138,116 @@
                     <a href="tin-tuc.html">Tin tức thiết kế</a>
                 </li>
             </ul>
+
+            <!-- Show search on mobile -->
+            <div class="right-box text-end d-lg-none">
+                <a href="#" class="btn-search-mobile">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+                <form class="search-box" method="get" action="">
+                    <input type="search" class="form-control" placeholder="Tìm kiếm" aria-label="Search" />
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </button>
+                </form>
+            </div>
         </nav>
     </header>
+
+    <!-- Menu show on mobile -->
+    <div class="offcanvas offcanvas-start menu-mobile d-lg-none" tabindex="-1" id="menu-mobile" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <a class="logo" href="#">
+                <img src="assets/images/logo-mobile.png" alt="logo" width="120" height="41">
+            </a>
+
+            <a href="#" class="btn-close-menu" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+        </div>
+
+        <div class="offcanvas-body">
+            <ul>
+                <li>
+                    <a href="index.html">Trang chủ</a>
+                </li>
+
+                <li class="menu-item-has-children">
+                    <a href="#">Thiết kế kiến trúc</a>
+                    <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất chung cư</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất biệt thự</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất nhà phố</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất văn phòng</a>
+                        </li>
+
+                        <li>
+                            <a href="shop.html">Thiết kế nội thất shop quần áo</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-item-has-children">
+                    <a href="danh-muc-thiet-ke.html">Thiết kế nội thất</a>
+                    <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất chung cư</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất biệt thự</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất nhà phố</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất văn phòng</a>
+                        </li>
+
+                        <li>
+                            <a href="shop.html">Thiết kế nội thất shop quần áo</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Thi công nội thất</a>
+                </li>
+
+                <li>
+                    <a href="du-an-tieu-bieu.html">Dự án tiêu biểu</a>
+                </li>
+
+                <li>
+                    <a href="tin-tuc.html">Tin tức thiết kế</a>
+                </li>
+
+                <li>
+                    <a href="gioi-thieu.html">Giới thiệu</a>
+                </li>
+
+                <li>
+                    <a href="lien-he.html">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Breadcrumb -->
     <div class="element-section">
@@ -160,254 +276,314 @@
 
     <!-- post content -->
     <div class="warp">
-        <div class="container">
-            <div class="project-detail pt-5 pb-5">
-                <div class="row row-custom">
-                    <div class="col-12 col-sm-7 col-md-8 col-custom">
-                        <h1 class="title-post">
-                            Thiết kế kiến trúc biệt thự nghỉ dưỡng CIPUTRA
-                        </h1>
+        <div class="element-section mb-2 mb-lg-0 pt-3 pt-lg-5 pb-5">
+            <div class="container">
+                <div class="project-detail">
+                    <div class="row row-custom">
+                        <div class="col-12 col-md-8 col-custom">
+                            <h1 class="title-post">
+                                Thiết kế kiến trúc biệt thự nghỉ dưỡng CIPUTRA
+                            </h1>
 
-                        <div class="content-post">
-                            <p>
-                                Trước khi bắt đầu xây dựng biệt thự thì có lẽ bước đầu tiên và cũng là quan trọng nhất đó là xác định được phong cách thiết kế kiến trúc biệt thự. Với đội ngũ chuyên nghiệp, EDEN luôn ưu tiên hỏi ý kiến gia chủ, nắm bắt được chất riêng của gia chủ để có thể thiết kế biệt thự sao cho khác biệt nhất và sang trọng nhất. Cùng EDEN khám phá ngay 5 phong cách thiết kế nhà biệt thự đẹp sau đây nhé!
-                            </p>
+                            <div class="content-post">
+                                <p>
+                                    Trước khi bắt đầu xây dựng biệt thự thì có lẽ bước đầu tiên và cũng là quan trọng nhất đó là xác định được phong cách thiết kế kiến trúc biệt thự. Với đội ngũ chuyên nghiệp, EDEN luôn ưu tiên hỏi ý kiến gia chủ, nắm bắt được chất riêng của gia chủ để có thể thiết kế biệt thự sao cho khác biệt nhất và sang trọng nhất. Cùng EDEN khám phá ngay 5 phong cách thiết kế nhà biệt thự đẹp sau đây nhé!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4 col-custom">
+                            <div class="info">
+                                <div class="item">
+                                    <div class="item__icon">
+                                        <img src="assets/images/icon/map.png" alt="" width="33" height="32">
+                                    </div>
+
+                                    <div class="item__text">
+                                        <strong>Địa điểm:</strong>
+                                        <span>Hà Nội</span>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="item__icon">
+                                        <img src="assets/images/icon/fluent.png" alt="" width="33" height="32">
+                                    </div>
+
+                                    <div class="item__text">
+                                        <strong>Thiết Kế:</strong>
+                                        <span>Kiến trúc sư David Long</span>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="item__icon">
+                                        <img src="assets/images/icon/resize.png" alt="" width="35" height="37">
+                                    </div>
+
+                                    <div class="item__text">
+                                        <strong>Diện Tích:</strong>
+                                        <span>452 m2</span>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="item__icon">
+                                        <img src="assets/images/icon/calendar.png" alt="" width="33" height="32">
+                                    </div>
+
+                                    <div class="item__text">
+                                        <strong>Hoàn Thành:</strong>
+                                        <span>22/01/2022</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-12 col-sm-5 col-md-4 col-custom">
-                        <div class="info">
-                            <div class="item">
-                                <div class="item__icon">
-                                    <img src="assets/images/icon/map.png" alt="" width="33" height="32">
-                                </div>
+                    <div class="feature hide-nav-default mt-4">
+                        <ul class="project-feature-gallery">
+                            <li data-thumb="assets/images/project/project-slider-thumb-1.jpg">
+                                <img src="assets/images/project/project-slider-1.jpg"  alt="" width="1201" height="800" />
+                            </li>
 
-                                <div class="item__text">
-                                    <strong>Địa điểm:</strong>
-                                    <span>Hà Nội</span>
-                                </div>
-                            </div>
+                            <li data-thumb="assets/images/project/project-slider-thumb-2.jpg">
+                                <img src="assets/images/project/project-slider-1.jpg"  alt="" width="1201" height="800" />
+                            </li>
 
-                            <div class="item">
-                                <div class="item__icon">
-                                    <img src="assets/images/icon/fluent.png" alt="" width="33" height="32">
-                                </div>
+                            <li data-thumb="assets/images/project/project-slider-thumb-3.jpg">
+                                <img src="assets/images/project/project-slider-1.jpg"  alt="" width="1201" height="800" />
+                            </li>
 
-                                <div class="item__text">
-                                    <strong>Thiết Kế:</strong>
-                                    <span>Kiến trúc sư David Long</span>
-                                </div>
-                            </div>
+                            <li data-thumb="assets/images/project/project-slider-thumb-4.jpg">
+                                <img src="assets/images/project/project-slider-1.jpg"  alt="" width="1201" height="800" />
+                            </li>
 
-                            <div class="item">
-                                <div class="item__icon">
-                                    <img src="assets/images/icon/resize.png" alt="" width="35" height="37">
-                                </div>
+                            <li data-thumb="assets/images/project/project-slider-thumb-5.jpg">
+                                <img src="assets/images/project/project-slider-1.jpg"  alt="" width="1201" height="800" />
+                            </li>
 
-                                <div class="item__text">
-                                    <strong>Diện Tích:</strong>
-                                    <span>452 m2</span>
-                                </div>
-                            </div>
+                            <li data-thumb="assets/images/project/project-slider-thumb-6.jpg">
+                                <img src="assets/images/project/project-slider-1.jpg"  alt="" width="1201" height="800" />
+                            </li>
 
-                            <div class="item">
-                                <div class="item__icon">
-                                    <img src="assets/images/icon/calendar.png" alt="" width="33" height="32">
-                                </div>
+                            <li data-thumb="assets/images/project/project-slider-thumb-7.jpg">
+                                <img src="assets/images/project/project-slider-1.jpg"  alt="" width="1201" height="800" />
+                            </li>
 
-                                <div class="item__text">
-                                    <strong>Hoàn Thành:</strong>
-                                    <span>22/01/2022</span>
-                                </div>
-                            </div>
-                        </div>
+                            <li data-thumb="assets/images/project/project-slider-thumb-8.jpg">
+                                <img src="assets/images/project/project-slider-1.jpg"  alt="" width="1201" height="800" />
+                            </li>
+                        </ul>
                     </div>
-                </div>
-
-                <div class="feature hide-nav-default mt-4">
-                    <ul class="project-feature-gallery">
-                        <li data-thumb="assets/images/project/project-slider-thumb-1.jpg">
-                            <img src="assets/images/project/project-slider-1.jpg"  alt="" width="1201" height="800" />
-                        </li>
-
-                        <li data-thumb="assets/images/project/project-slider-thumb-2.jpg">
-                            <img src="assets/images/project/project-slider-1.jpg"  alt="" width="1201" height="800" />
-                        </li>
-
-                        <li data-thumb="assets/images/project/project-slider-thumb-3.jpg">
-                            <img src="assets/images/project/project-slider-1.jpg"  alt="" width="1201" height="800" />
-                        </li>
-
-                        <li data-thumb="assets/images/project/project-slider-thumb-4.jpg">
-                            <img src="assets/images/project/project-slider-1.jpg"  alt="" width="1201" height="800" />
-                        </li>
-
-                        <li data-thumb="assets/images/project/project-slider-thumb-5.jpg">
-                            <img src="assets/images/project/project-slider-1.jpg"  alt="" width="1201" height="800" />
-                        </li>
-
-                        <li data-thumb="assets/images/project/project-slider-thumb-6.jpg">
-                            <img src="assets/images/project/project-slider-1.jpg"  alt="" width="1201" height="800" />
-                        </li>
-
-                        <li data-thumb="assets/images/project/project-slider-thumb-7.jpg">
-                            <img src="assets/images/project/project-slider-1.jpg"  alt="" width="1201" height="800" />
-                        </li>
-
-                        <li data-thumb="assets/images/project/project-slider-thumb-8.jpg">
-                            <img src="assets/images/project/project-slider-1.jpg"  alt="" width="1201" height="800" />
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
 
-        <div class="related-project pb-5">
-            <div class="container">
-                <h2 class="title title-element text-center mb-5">
-                    Dự án liên quan khác
-                </h2>
-            </div>
+        <div class="element-section pt-4 pt-lg-0 pb-5">
+            <div class="related-project ">
+                <div class="container">
+                    <h2 class="title title-element text-center mb-3 mb-lg-5">
+                        Dự án liên quan khác
+                    </h2>
+                </div>
 
-            <div class="element-project">
-                <div class="element-project-slider owl-carousel">
-                    <div class="item">
-                        <div class="item__thumb">
-                            <img src="assets/images/services/service-1.jpg" alt="service">
+                <div class="element-project">
+                    <!-- Desktop -->
+                    <div class="element-project-slider owl-carousel d-none d-md-block">
+                        <div class="item">
+                            <div class="item__thumb">
+                                <img src="assets/images/services/service-1.jpg" alt="service">
+                            </div>
+
+                            <div class="content">
+                                <h3 class="title-post">
+                                    <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
+                                </h3>
+
+                                <p>48m2 - 2PN</p>
+                            </div>
                         </div>
 
-                        <div class="content">
-                            <h3 class="title-post">
-                                <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
-                            </h3>
+                        <div class="item">
+                            <div class="item__thumb">
+                                <img src="assets/images/services/service-2.jpg" alt="service">
+                            </div>
 
-                            <p>48m2 - 2PN</p>
+                            <div class="content">
+                                <h3 class="title-post">
+                                    <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
+                                </h3>
+
+                                <p>48m2 - 2PN</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item__thumb">
+                                <img src="assets/images/services/service-3.jpg" alt="service">
+                            </div>
+
+                            <div class="content">
+                                <h3 class="title-post">
+                                    <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
+                                </h3>
+
+                                <p>48m2 - 2PN</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item__thumb">
+                                <img src="assets/images/services/service-4.jpg" alt="service">
+                            </div>
+
+                            <div class="content">
+                                <h3 class="title-post">
+                                    <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
+                                </h3>
+
+                                <p>48m2 - 2PN</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item__thumb">
+                                <img src="assets/images/services/service-5.jpg" alt="service">
+                            </div>
+
+                            <div class="content">
+                                <h3 class="title-post">
+                                    <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
+                                </h3>
+
+                                <p>48m2 - 2PN</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item__thumb">
+                                <img src="assets/images/services/service-1.jpg" alt="service">
+                            </div>
+
+                            <div class="content">
+                                <h3 class="title-post">
+                                    <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
+                                </h3>
+
+                                <p>48m2 - 2PN</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item__thumb">
+                                <img src="assets/images/services/service-2.jpg" alt="service">
+                            </div>
+
+                            <div class="content">
+                                <h3 class="title-post">
+                                    <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
+                                </h3>
+
+                                <p>48m2 - 2PN</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item__thumb">
+                                <img src="assets/images/services/service-3.jpg" alt="service">
+                            </div>
+
+                            <div class="content">
+                                <h3 class="title-post">
+                                    <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
+                                </h3>
+
+                                <p>48m2 - 2PN</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item__thumb">
+                                <img src="assets/images/services/service-4.jpg" alt="service">
+                            </div>
+
+                            <div class="content">
+                                <h3 class="title-post">
+                                    <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
+                                </h3>
+
+                                <p>48m2 - 2PN</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item__thumb">
+                                <img src="assets/images/services/service-5.jpg" alt="service">
+                            </div>
+
+                            <div class="content">
+                                <h3 class="title-post">
+                                    <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
+                                </h3>
+
+                                <p>48m2 - 2PN</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="item">
-                        <div class="item__thumb">
-                            <img src="assets/images/services/service-2.jpg" alt="service">
+                    <!-- Mobile -->
+                    <div class="related-project-mobile element-project-grid owl-carousel d-md-none">
+                        <div class="item-group">
+                            <div class="item__post">
+                                <div class="item__thumb">
+                                    <a href="#">
+                                        <img src="assets/images/services/service-1.jpg" alt="service">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="item__post">
+                                <div class="item__thumb">
+                                    <a href="#">
+                                        <img src="assets/images/services/service-2.jpg" alt="service">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="item__post">
+                                <div class="item__thumb">
+                                    <a href="#">
+                                        <img src="assets/images/services/service-3.jpg" alt="service">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="content">
-                            <h3 class="title-post">
-                                <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
-                            </h3>
+                        <div class="item-group">
+                            <div class="item__post">
+                                <div class="item__thumb">
+                                    <a href="#">
+                                        <img src="assets/images/services/service-4.jpg" alt="service">
+                                    </a>
+                                </div>
+                            </div>
 
-                            <p>48m2 - 2PN</p>
-                        </div>
-                    </div>
+                            <div class="item__post">
+                                <div class="item__thumb">
+                                    <a href="#">
+                                        <img src="assets/images/services/service-5.jpg" alt="service">
+                                    </a>
+                                </div>
+                            </div>
 
-                    <div class="item">
-                        <div class="item__thumb">
-                            <img src="assets/images/services/service-3.jpg" alt="service">
-                        </div>
-
-                        <div class="content">
-                            <h3 class="title-post">
-                                <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
-                            </h3>
-
-                            <p>48m2 - 2PN</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item__thumb">
-                            <img src="assets/images/services/service-4.jpg" alt="service">
-                        </div>
-
-                        <div class="content">
-                            <h3 class="title-post">
-                                <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
-                            </h3>
-
-                            <p>48m2 - 2PN</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item__thumb">
-                            <img src="assets/images/services/service-5.jpg" alt="service">
-                        </div>
-
-                        <div class="content">
-                            <h3 class="title-post">
-                                <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
-                            </h3>
-
-                            <p>48m2 - 2PN</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item__thumb">
-                            <img src="assets/images/services/service-1.jpg" alt="service">
-                        </div>
-
-                        <div class="content">
-                            <h3 class="title-post">
-                                <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
-                            </h3>
-
-                            <p>48m2 - 2PN</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item__thumb">
-                            <img src="assets/images/services/service-2.jpg" alt="service">
-                        </div>
-
-                        <div class="content">
-                            <h3 class="title-post">
-                                <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
-                            </h3>
-
-                            <p>48m2 - 2PN</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item__thumb">
-                            <img src="assets/images/services/service-3.jpg" alt="service">
-                        </div>
-
-                        <div class="content">
-                            <h3 class="title-post">
-                                <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
-                            </h3>
-
-                            <p>48m2 - 2PN</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item__thumb">
-                            <img src="assets/images/services/service-4.jpg" alt="service">
-                        </div>
-
-                        <div class="content">
-                            <h3 class="title-post">
-                                <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
-                            </h3>
-
-                            <p>48m2 - 2PN</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="item__thumb">
-                            <img src="assets/images/services/service-5.jpg" alt="service">
-                        </div>
-
-                        <div class="content">
-                            <h3 class="title-post">
-                                <a href="chi-tiet-du-an.html">chung cư Vinhomes Smart City</a>
-                            </h3>
-
-                            <p>48m2 - 2PN</p>
+                            <div class="item__post">
+                                <div class="item__thumb">
+                                    <a href="#">
+                                        <img src="assets/images/services/service-6.jpg" alt="service">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -514,6 +690,35 @@
         </div>
     </div>
 </footer>
+
+<!-- Chat Mobile -->
+<div class="group-action-mobile">
+    <div class="box">
+        <a class="talk" href="#">
+            <img src="assets/images/icon/talk-mobile.png" alt="" width="32" height="28">
+            <span>Chat Ngay</span>
+        </a>
+
+        <a class="messenger" href="#">
+            <img src="assets/images/icon/facebook-messenger-mobile.png" alt="" width="32" height="32">
+            <span>Messenger</span>
+        </a>
+
+        <a class="phone" href="#">
+            <img src="assets/images/icon/phone-mobile.png" alt="" height="62" width="62">
+        </a>
+
+        <a class="zalo" href="#">
+            <img src="assets/images/icon/zalo-mobile.png" alt="" height="33" width="33">
+            <span>Zalo</span>
+        </a>
+
+        <a id="back-top" href="#">
+            <img src="assets/images/icon/back-top.png" alt="" height="15" width="20">
+            <span>Back top</span>
+        </a>
+    </div>
+</div>
 
 <!-- Jquery JS -->
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>

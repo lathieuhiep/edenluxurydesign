@@ -75,6 +75,13 @@
         </div>
 
         <nav class="nav-primary">
+            <!-- Button show menu on mobile -->
+            <div class="left-box d-lg-none">
+                <a class="btn-menu-mobile" data-bs-toggle="offcanvas" href="#menu-mobile">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+
             <ul class="nav-primary__left">
                 <li>
                     <a href="index.html">Trang chủ</a>
@@ -112,7 +119,8 @@
             </ul>
 
             <a class="logo" href="#">
-                <img src="assets/images/logo.png" alt="logo">
+                <img class="d-none d-lg-block" src="assets/images/logo.png" alt="logo" width="100" height="100">
+                <img class="d-lg-none" src="assets/images/logo-mobile.png" alt="logo" width="120" height="41">
             </a>
 
             <ul class="nav-primary__right">
@@ -128,8 +136,116 @@
                     <a href="tin-tuc.html">Tin tức thiết kế</a>
                 </li>
             </ul>
+
+            <!-- Show search on mobile -->
+            <div class="right-box text-end d-lg-none">
+                <a href="#" class="btn-search-mobile">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+                <form class="search-box" method="get" action="">
+                    <input type="search" class="form-control" placeholder="Tìm kiếm" aria-label="Search" />
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </button>
+                </form>
+            </div>
         </nav>
     </header>
+
+    <!-- Menu show on mobile -->
+    <div class="offcanvas offcanvas-start menu-mobile d-lg-none" tabindex="-1" id="menu-mobile" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <a class="logo" href="#">
+                <img src="assets/images/logo-mobile.png" alt="logo" width="120" height="41">
+            </a>
+
+            <a href="#" class="btn-close-menu" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+        </div>
+
+        <div class="offcanvas-body">
+            <ul>
+                <li>
+                    <a href="index.html">Trang chủ</a>
+                </li>
+
+                <li class="menu-item-has-children">
+                    <a href="#">Thiết kế kiến trúc</a>
+                    <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất chung cư</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất biệt thự</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất nhà phố</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất văn phòng</a>
+                        </li>
+
+                        <li>
+                            <a href="shop.html">Thiết kế nội thất shop quần áo</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-item-has-children">
+                    <a href="danh-muc-thiet-ke.html">Thiết kế nội thất</a>
+                    <span class="sub-menu-toggle"></span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất chung cư</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất biệt thự</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất nhà phố</a>
+                        </li>
+
+                        <li>
+                            <a href="thiet-ke-noi-that-chung-cu.html">Thiết kế nội thất văn phòng</a>
+                        </li>
+
+                        <li>
+                            <a href="shop.html">Thiết kế nội thất shop quần áo</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Thi công nội thất</a>
+                </li>
+
+                <li>
+                    <a href="du-an-tieu-bieu.html">Dự án tiêu biểu</a>
+                </li>
+
+                <li>
+                    <a href="tin-tuc.html">Tin tức thiết kế</a>
+                </li>
+
+                <li>
+                    <a href="gioi-thieu.html">Giới thiệu</a>
+                </li>
+
+                <li>
+                    <a href="lien-he.html">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Breadcrumb -->
     <div class="element-section">
@@ -153,56 +269,48 @@
     </div>
 
     <!-- Design Grid -->
-    <div class="element-section pt-5 pb-4">
+    <div class="element-section mb-2 mb-lg-0 pt-5 pb-4">
         <div class="container">
-            <div class="element-design-grid">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-                    <div class="col">
-                        <div class="item">
-                            <figure class="item__thumb">
-                                <img src="assets/images/shop/shop-1.jpg" alt="" width="384" height="401">
-                            </figure>
+            <div class="element-design-grid element-design-grid-owl owl-carousel">
+                <div class="item">
+                    <figure class="item__thumb">
+                        <img src="assets/images/shop/shop-1.jpg" alt="" width="384" height="401">
+                    </figure>
 
-                            <div class="content">
-                                <h4 class="title-post">
-                                    <a href="#">
-                                        Thiết kế shop quần áo nam
-                                    </a>
-                                </h4>
-                            </div>
-                        </div>
+                    <div class="content">
+                        <h4 class="title-post">
+                            <a href="#">
+                                Thiết kế shop quần áo nam
+                            </a>
+                        </h4>
                     </div>
+                </div>
 
-                    <div class="col">
-                        <div class="item">
-                            <figure class="item__thumb">
-                                <img src="assets/images/shop/shop-2.jpg" alt="" width="384" height="401">
-                            </figure>
+                <div class="item">
+                    <figure class="item__thumb">
+                        <img src="assets/images/shop/shop-2.jpg" alt="" width="384" height="401">
+                    </figure>
 
-                            <div class="content">
-                                <h4 class="title-post">
-                                    <a href="#">
-                                        Thiết kế shop quần áo nữ
-                                    </a>
-                                </h4>
-                            </div>
-                        </div>
+                    <div class="content">
+                        <h4 class="title-post">
+                            <a href="#">
+                                Thiết kế shop quần áo nữ
+                            </a>
+                        </h4>
                     </div>
+                </div>
 
-                    <div class="col">
-                        <div class="item">
-                            <figure class="item__thumb">
-                                <img src="assets/images/shop/shop-3.jpg" alt="" width="385" height="401">
-                            </figure>
+                <div class="item">
+                    <figure class="item__thumb">
+                        <img src="assets/images/shop/shop-3.jpg" alt="" width="385" height="401">
+                    </figure>
 
-                            <div class="content">
-                                <h4 class="title-post">
-                                    <a href="#">
-                                        Thiết kế shop quần áo trẻ em
-                                    </a>
-                                </h4>
-                            </div>
-                        </div>
+                    <div class="content">
+                        <h4 class="title-post">
+                            <a href="#">
+                                Thiết kế shop quần áo trẻ em
+                            </a>
+                        </h4>
                     </div>
                 </div>
             </div>
@@ -216,7 +324,7 @@
                 Dự án thiết kế nội thất shop quần áo
             </h2>
 
-            <div class="search-filter mb-5">
+            <div class="search-filter mb-3 mb-lg-5">
                 <select class="form-select" aria-label="">
                     <option value="1">Phong cách</option>
                     <option value="2">Phong cách</option>
@@ -237,7 +345,7 @@
                 </select>
             </div>
 
-            <div class="element-project-grid mb-5">
+            <div class="element-project-grid style-2 mb-5">
                 <div class="item">
                     <div class="row-item">
                         <div class="col-item">
@@ -346,7 +454,7 @@
     <div class="element-section pt-60 pb-30">
         <div class="container">
             <h2 class="title title-element text-center pb-30">
-                Quy trình thiết kế shop quần áo tại EDEN
+                Quy trình thiết kế kiến trúc tại EDEN
             </h2>
 
             <div class="element-timeline">
@@ -356,7 +464,7 @@
                             <span>01</span>
                         </div>
 
-                        <span class="dots"></span>
+                        <div class="dots"></div>
 
                         <div class="text">
                             Nhận hợp đồng
@@ -368,7 +476,7 @@
                             <span>02</span>
                         </div>
 
-                        <span class="dots"></span>
+                        <div class="dots"></div>
 
                         <div class="text">
                             Ký hợp đồng thiết kế
@@ -380,7 +488,7 @@
                             <span>03</span>
                         </div>
 
-                        <span class="dots"></span>
+                        <div class="dots"></div>
 
                         <div class="text">
                             Lên phương án thiết kế
@@ -392,7 +500,7 @@
                             <span>04</span>
                         </div>
 
-                        <span class="dots"></span>
+                        <div class="dots"></div>
 
                         <div class="text">
                             Triển khai hồ sơ kỹ thuật
@@ -404,7 +512,7 @@
                             <span>05</span>
                         </div>
 
-                        <span class="dots"></span>
+                        <div class="dots"></div>
 
                         <div class="text">
                             Ký hợp đồng phát sinh
@@ -416,7 +524,7 @@
                             <span>06</span>
                         </div>
 
-                        <span class="dots"></span>
+                        <div class="dots"></div>
 
                         <div class="text">
                             CĐT chỉnh sửa hồ sơ thiết kế
@@ -428,7 +536,7 @@
                             <span>07</span>
                         </div>
 
-                        <span class="dots"></span>
+                        <div class="dots"></div>
 
                         <div class="text">
                             Hoàn thiện & bàn giao hồ sơ thiết kế
@@ -440,7 +548,7 @@
                             <span>08</span>
                         </div>
 
-                        <span class="dots"></span>
+                        <div class="dots"></div>
 
                         <div class="text">
                             Hoàn thiện các hạng mục
@@ -452,7 +560,7 @@
     </div>
 
     <!-- Pricing Table -->
-    <div class="element-section element-section-about pt-5 pb-5">
+    <div class="element-section element-section-about element-section-pricing pt-5 pb-5">
         <div class="container">
             <h2 class="title title-element text-center pb-30">
                 Báo giá thiết kế shop quần áo
@@ -506,7 +614,9 @@
                         </li>
                     </ul>
 
-                    <a class="registration" href="#">Đăng kí gói này</a>
+                    <div class="action-box">
+                        <a class="registration" href="#">Đăng kí gói này</a>
+                    </div>
                 </div>
 
                 <div class="item">
@@ -556,7 +666,9 @@
                         </li>
                     </ul>
 
-                    <a class="registration" href="#">Đăng kí gói này</a>
+                    <div class="action-box">
+                        <a class="registration" href="#">Đăng kí gói này</a>
+                    </div>
                 </div>
 
                 <div class="item">
@@ -606,7 +718,9 @@
                         </li>
                     </ul>
 
-                    <a class="registration" href="#">Đăng kí gói này</a>
+                    <div class="action-box">
+                        <a class="registration" href="#">Đăng kí gói này</a>
+                    </div>
                 </div>
 
                 <div class="item">
@@ -656,7 +770,9 @@
                         </li>
                     </ul>
 
-                    <a class="registration" href="#">Đăng kí gói này</a>
+                    <div class="action-box">
+                        <a class="registration" href="#">Đăng kí gói này</a>
+                    </div>
                 </div>
 
                 <div class="item">
@@ -706,14 +822,16 @@
                         </li>
                     </ul>
 
-                    <a class="registration" href="#">Đăng kí gói này</a>
+                    <div class="action-box">
+                        <a class="registration" href="#">Đăng kí gói này</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Partner -->
-    <div class="element-section pt-60">
+    <div class="element-section mb-2 mb-lg-0 pt-60">
         <div class="container">
             <h2 class="title title-element text-center">
                 Báo chí nói về Eden
@@ -759,7 +877,7 @@
         </div>
     </div>
 
-    <div class="element-section">
+    <div class="element-section d-none d-lg-block">
         <div class="container">
             <div class="space"></div>
         </div>
@@ -998,6 +1116,35 @@
         </div>
     </div>
 </footer>
+
+<!-- Chat Mobile -->
+<div class="group-action-mobile">
+    <div class="box">
+        <a class="talk" href="#">
+            <img src="assets/images/icon/talk-mobile.png" alt="" width="32" height="28">
+            <span>Chat Ngay</span>
+        </a>
+
+        <a class="messenger" href="#">
+            <img src="assets/images/icon/facebook-messenger-mobile.png" alt="" width="32" height="32">
+            <span>Messenger</span>
+        </a>
+
+        <a class="phone" href="#">
+            <img src="assets/images/icon/phone-mobile.png" alt="" height="62" width="62">
+        </a>
+
+        <a class="zalo" href="#">
+            <img src="assets/images/icon/zalo-mobile.png" alt="" height="33" width="33">
+            <span>Zalo</span>
+        </a>
+
+        <a id="back-top" href="#">
+            <img src="assets/images/icon/back-top.png" alt="" height="15" width="20">
+            <span>Back top</span>
+        </a>
+    </div>
+</div>
 
 <!-- Jquery JS -->
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>

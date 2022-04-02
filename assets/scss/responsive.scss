@@ -574,6 +574,98 @@
     display: none;
   }
 
+  .element-contact {
+    grid-template-columns: 1fr;
+
+    .right {
+      display: none;
+    }
+  }
+
+  .related-project-mobile {
+    padding: 0 12px;
+
+    .item-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 8px;
+
+      .item__post {
+        &:nth-child(3n+3) {
+          grid-column-end: span 2;
+
+          .item__thumb {
+            overflow: hidden;
+            height: 250px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .project-feature-slider {
+    .item {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 8px;
+
+      &__post {
+        .thumb {
+          overflow: hidden;
+          height: 300px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        &:nth-child(3n+3) {
+          grid-column-end: span 2;
+        }
+
+        .content {
+          .title-post {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .element-post-news {
+    .top {
+      &__title {
+        font-size: 22px;
+      }
+    }
+
+    .item {
+      &__content {
+        .title {
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .detail-post {
+    background-color: #ffffff;
+  }
+
+  .element-related-posts {
+    background-color: #FBF9F7;
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -602,6 +694,21 @@
     }
   }
 
+  .element-project-grid {
+    &.style-2 {
+      .item {
+        .col-item {
+          width: 33.33333333%;
+
+          &:nth-child(5n+4),
+          &:nth-child(5n+5){
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
   .site-footer {
     .site-info {
       padding-bottom: 30px;
@@ -614,21 +721,6 @@
             &:before {
               display: none;
             }
-          }
-        }
-      }
-    }
-  }
-
-  .element-project-grid {
-    &.style-2 {
-      .item {
-        .col-item {
-          width: 33.33333333%;
-
-          &:nth-child(5n+4),
-          &:nth-child(5n+5){
-            width: 50%;
           }
         }
       }
@@ -789,6 +881,28 @@
     }
   }
 
+  .project-detail {
+    .info {
+      margin-top: 20px;
+    }
+  }
+
+  .element-list-news {
+    .item {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .pagination-box {
+    grid-template-columns: 1fr;
+  }
+
+  .element-page {
+    .title-page {
+      font-size: 22px;
+    }
+  }
+
   .site-footer {
     @include flexbox();
     @include flex-direction(column);
@@ -861,6 +975,7 @@
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
+
   .element-price-list {
     .box {
       grid-gap: 24px;
@@ -875,6 +990,19 @@
       }
     }
   }
+
+  .element-post-grid {
+    &.site-news {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .element-list-news {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
+  }
+
 }
 
 @media (min-width: 576px) {
@@ -1029,6 +1157,71 @@
       padding: 8px 12px 9px;
       border-radius: 4px;
       background-color: #FCFCFC;
+    }
+  }
+
+  .element-contact {
+    .form-contact {
+      .group {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+      }
+    }
+  }
+
+  .related-project-mobile {
+    .item-group {
+      .item__post {
+        &:nth-child(3n+3) {
+          .item__thumb {
+            height: 170px;
+          }
+        }
+      }
+    }
+  }
+
+  .project-feature-slider {
+    .item {
+      &__post {
+        .thumb {
+          height: 167px;
+        }
+
+        .content {
+          .title-post {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .element-post-grid {
+    &.site-news {
+      grid-template-columns: 1fr;
+
+      .item:first-child {
+        grid-column: 1;
+        grid-row: 1;
+      }
+    }
+  }
+
+  .element-post-news {
+    &.related-posts {
+      .item {
+        &__thumb {
+          height: 130px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
     }
   }
 
