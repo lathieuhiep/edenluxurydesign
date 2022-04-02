@@ -574,6 +574,14 @@
     display: none;
   }
 
+  .element-contact {
+    grid-template-columns: 1fr;
+
+    .right {
+      display: none;
+    }
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -1029,6 +1037,15 @@
       padding: 8px 12px 9px;
       border-radius: 4px;
       background-color: #FCFCFC;
+    }
+  }
+
+  .element-contact {
+    .form-contact {
+      .group {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+      }
     }
   }
 
