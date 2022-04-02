@@ -11,6 +11,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 42px;
+  margin-bottom: 20px;
 
   .item {
     &__avatar {
