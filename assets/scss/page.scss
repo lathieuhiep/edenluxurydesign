@@ -6,12 +6,11 @@
 }
 
 .team-group {
-  padding-left: 127px;
-  padding-right: 127px;
+  max-width: 946px;
+  margin: 0 auto 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 42px;
-  margin-bottom: 20px;
 
   .item {
     &__avatar {

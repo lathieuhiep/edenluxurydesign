@@ -270,7 +270,27 @@
                     enableDrag: false,
                     currentPagerPosition: 'left',
                     prevHtml: '<i class="fa-solid fa-chevron-left"></i>',
-                    nextHtml: '<i class="fa-solid fa-chevron-right"></i>'
+                    nextHtml: '<i class="fa-solid fa-chevron-right"></i>',
+                    responsive: [
+                        {
+                            breakpoint:991,
+                            settings: {
+                                thumbItem: 7,
+                            }
+                        },
+                        {
+                            breakpoint:767,
+                            settings: {
+                                thumbItem: 5,
+                            }
+                        },
+                        {
+                            breakpoint:575,
+                            settings: {
+                                thumbItem: 3,
+                            }
+                        },
+                    ]
                 });
             })
         }
@@ -433,6 +453,39 @@
                     navSpeed: 800,
                     dotsSpeed: 800,
                     dragEndSpeed: 800
+                })
+            })
+        }
+
+        // element team member
+        const elementTeamMember = $('.element-team-member');
+        if ( elementTeamMember.length ) {
+            elementTeamMember.each(function () {
+                $(this).owlCarousel({
+                    margin: 20,
+                    loop: true,
+                    nav: false,
+                    dots: false,
+                    autoplaySpeed: 800,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                    navSpeed: 800,
+                    dotsSpeed: 800,
+                    dragEndSpeed: 800,
+                    responsive:{
+                        0: {
+                            items: 2,
+                            center: true,
+                            margin: 12,
+                        },
+                        768: {
+                            items: 3,
+
+                        },
+                        1200: {
+                            items: 4
+                        }
+                    }
                 })
             })
         }

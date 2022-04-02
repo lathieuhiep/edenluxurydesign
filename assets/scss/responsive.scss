@@ -700,7 +700,8 @@
   }
 
   .element-project-grid {
-    &.style-2 {
+    &.style-2,
+    &.project-grid-services {
       .item {
         .col-item {
           width: 33.33333333%;
@@ -711,6 +712,13 @@
           }
         }
       }
+    }
+  }
+
+  .element-contact {
+    &.contact-us {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 12px;
     }
   }
 
@@ -972,6 +980,44 @@
     }
   }
 
+  .element-project-grid {
+    &.project-grid-services {
+      .item {
+        .col-item {
+          &:nth-child(3n+3) {
+            width: 100%;
+          }
+
+          .thumb {
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        &__post {
+          .content {
+            .title-post {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .element-contact {
+    &.contact-us {
+      .map {
+        height: 512px;
+      }
+    }
+  }
+
 }
 
 @media (min-width: 576px) and (max-width: 991px) {
@@ -1010,6 +1056,24 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 8px;
+  }
+
+  .element-project-grid {
+    &.project-grid-services {
+      .item {
+        .col-item {
+          .thumb {
+            height: 250px;
+          }
+
+          &:nth-child(3n+3) {
+            .thumb {
+              height: 300px;
+            }
+          }
+        }
+      }
+    }
   }
 
 }
@@ -1071,6 +1135,14 @@
     }
   }
 
+  .element-video {
+    &__post {
+      .item__thumb {
+        height: 150px;
+      }
+    }
+  }
+
   .service-tabs {
     .nav {
       grid-gap: 30px;
@@ -1103,19 +1175,16 @@
 
   .element-team-member {
     .item {
-      &__thumb {
-        overflow: hidden;
-        height: 250px;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-
       &__info {
         margin-bottom: 8px;
+
+        .name {
+          font-size: 14px;
+        }
+
+        .position {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -1228,6 +1297,34 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+
+  .team-group {
+    .item {
+      &__info {
+        .position {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .element-project-grid {
+    &.project-grid-services {
+      .item {
+        .col-item {
+          .thumb {
+            height: 150px;
+          }
+
+          &:nth-child(3n+3) {
+            .thumb {
+              height: 200px;
+            }
           }
         }
       }
