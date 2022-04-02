@@ -54,6 +54,9 @@
                     margin: 18,
                     nav: false,
                     dots: true,
+                    autoplaySpeed: 800,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
                     navSpeed: 800,
                     dotsSpeed: 800,
                     dragEndSpeed: 800
@@ -83,6 +86,9 @@
                     margin: 18,
                     nav: false,
                     dots: true,
+                    autoplaySpeed: 800,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
                     navSpeed: 800,
                     dotsSpeed: 800,
                     dragEndSpeed: 800,
@@ -194,7 +200,27 @@
                     enableDrag: false,
                     currentPagerPosition: 'left',
                     prevHtml: '<i class="fa-solid fa-chevron-left"></i>',
-                    nextHtml: '<i class="fa-solid fa-chevron-right"></i>'
+                    nextHtml: '<i class="fa-solid fa-chevron-right"></i>',
+                    responsive: [
+                        {
+                            breakpoint:991,
+                            settings: {
+                                thumbItem: 7,
+                            }
+                        },
+                        {
+                            breakpoint:767,
+                            settings: {
+                                thumbItem: 5,
+                            }
+                        },
+                        {
+                            breakpoint:575,
+                            settings: {
+                                thumbItem: 3,
+                            }
+                        },
+                    ]
                 });
             })
         }
@@ -208,6 +234,9 @@
                     margin: 20,
                     nav: false,
                     dots: true,
+                    autoplaySpeed: 800,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
                     navSpeed: 800,
                     dotsSpeed: 800,
                     dragEndSpeed: 800,
@@ -252,12 +281,15 @@
 
             elementProjectSlider.each(function () {
                 const $this = $(this);
-
+                const numberItem = 5
                 $this.owlCarousel({
                     loop: true,
                     margin: 18,
                     nav: false,
                     dots: true,
+                    autoplaySpeed: 800,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
                     navSpeed: 800,
                     dotsSpeed: 800,
                     dragEndSpeed: 800,
@@ -265,20 +297,30 @@
                         0:{
                             items: 1
                         },
-                        600:{
+                        576:{
+                            items: 2
+                        },
+                        768:{
                             items: 3
                         },
-                        1000:{
-                            items: 5
+                        992:{
+                            items: 4
+                        },
+                        1200:{
+                            items: numberItem
                         }
                     },
                     onInitialized: function () {
                         const owlItemActive = $this.find('.owl-item.active');
-                        const first = owlItemActive[0];
-                        const last = owlItemActive[owlItemActive.length - 2];
 
-                        first.classList.add('overlay');
-                        last.classList.add('overlay');
+                        if ( owlItemActive.length >= numberItem ) {
+                            const first = owlItemActive[0];
+                            const last = owlItemActive[owlItemActive.length - 2];
+
+                            first.classList.add('overlay');
+                            last.classList.add('overlay');
+                        }
+
                     },
                     onDrag: function () {
                         const owlItem = $this.find('.owl-item');
@@ -290,15 +332,18 @@
                     },
                     onTranslated: function () {
                         const owlItemActive = $this.find('.owl-item.active');
-                        const first = owlItemActive[0];
-                        let last = owlItemActive[owlItemActive.length - 2];
 
-                        if ( owlItemActive.length === 5 ) {
-                            last = owlItemActive[owlItemActive.length - 1];
+                        if ( owlItemActive.length >= numberItem ) {
+                            const first = owlItemActive[0];
+                            let last = owlItemActive[owlItemActive.length - 2];
+
+                            if ( owlItemActive.length === 5 ) {
+                                last = owlItemActive[owlItemActive.length - 1];
+                            }
+
+                            first.classList.add('overlay');
+                            last.classList.add('overlay');
                         }
-
-                        first.classList.add('overlay');
-                        last.classList.add('overlay');
                     }
                 })
             })
@@ -315,6 +360,9 @@
                     margin: 8,
                     nav: false,
                     dots: true,
+                    autoplaySpeed: 800,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
                     navSpeed: 800,
                     dotsSpeed: 800,
                     dragEndSpeed: 800
@@ -330,6 +378,9 @@
                     loop: true,
                     nav: false,
                     dots: false,
+                    autoplaySpeed: 800,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
                     navSpeed: 800,
                     dotsSpeed: 800,
                     dragEndSpeed: 800,
@@ -348,19 +399,59 @@
             })
         }
 
-    });
-
-    // Offcanvas menu mobile
-    const myOffcanvas = document.getElementById('menu-mobile');
-    const bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
-
-    $(window).on('resize', function () {
-        const widthScreen = $(window).width();
-
-        if ( widthScreen >= 992 ) {
-            bsOffcanvas.hide();
+        // related project mobile
+        const relatedProjectMobile = $('.related-project-mobile');
+        if ( relatedProjectMobile.length ) {
+            relatedProjectMobile.each(function () {
+                $(this).owlCarousel({
+                    items: 1,
+                    loop: true,
+                    nav: false,
+                    dots: true,
+                    autoplaySpeed: 800,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                    navSpeed: 800,
+                    dotsSpeed: 800,
+                    dragEndSpeed: 800
+                })
+            })
         }
 
-    })
+        // project feature slider
+        const projectFeatureSlider = $('.project-feature-slider');
+        if ( projectFeatureSlider.length ) {
+            projectFeatureSlider.each(function () {
+                $(this).owlCarousel({
+                    items: 1,
+                    loop: true,
+                    nav: false,
+                    dots: true,
+                    autoplaySpeed: 800,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                    navSpeed: 800,
+                    dotsSpeed: 800,
+                    dragEndSpeed: 800
+                })
+            })
+        }
+
+    });
+
+    // canvas menu mobile
+    const canvasMenuMobile = $('#menu-mobile');
+    if ( canvasMenuMobile.length ) {
+        const bsCanvasMenuMobile = new bootstrap.Offcanvas(canvasMenuMobile);
+
+        $(window).on('resize', function () {
+            const widthScreen = $(window).width();
+
+            if ( widthScreen >= 992 ) {
+                bsCanvasMenuMobile.hide();
+            }
+
+        })
+    }
 
 } )(jQuery);
