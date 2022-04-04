@@ -1,8 +1,8 @@
 .element-partner {
-  .owl-stage {
-    @include flexbox();
-    @include align-items(center);
-  }
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 52px;
+  @include align-items(center);
 
   .item {
     text-align: center;

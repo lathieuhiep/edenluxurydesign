@@ -135,45 +135,6 @@
 
         }
 
-        // partner
-        const elementPartner = $('.element-partner');
-        if ( elementPartner.length ) {
-
-            elementPartner.each(function () {
-                $(this).owlCarousel({
-                    loop: true,
-                    nav: false,
-                    dots: false,
-                    margin: 12,
-                    navSpeed: 800,
-                    dotsSpeed: 800,
-                    dragEndSpeed: 800,
-                    autoplaySpeed: 800,
-                    autoplay: true,
-                    autoplayTimeout: 3000,
-                    responsive:{
-                        0:{
-                            items: 2
-                        },
-                        480:{
-                            items: 3
-                        },
-                        768:{
-                            items: 4
-                        },
-                        992:{
-                            items: 5
-                        },
-                        1024:{
-                            items: 6,
-                            margin: 40
-                        }
-                    }
-                })
-            })
-
-        }
-
         // show content post
         const postContentText = $('.height-content-see-more');
         if ( postContentText.length ) {
@@ -187,6 +148,7 @@
                 }, 400, function () {
                     postContentText.css('height','auto');
                 });
+
                 $(this).closest('.action-box-see-more').remove();
             })
         }
@@ -482,11 +444,10 @@
                             center: true,
                             margin: 12,
                         },
-                        768: {
+                        576: {
                             items: 3,
-
                         },
-                        1200: {
+                        768: {
                             items: 4
                         }
                     }

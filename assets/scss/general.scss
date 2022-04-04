@@ -326,8 +326,9 @@ input[type="search"]::-webkit-search-results-decoration {
   .box {
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(2, 1fr) auto repeat(2, 1fr);
     grid-gap: 6px;
+    margin: 0 auto;
     @include align-items(flex-end);
 
     a {
