@@ -1076,6 +1076,10 @@
     }
   }
 
+  .element-image-banner {
+    height: 300px;
+  }
+
 }
 
 @media (min-width: 576px) {
@@ -1137,15 +1141,29 @@
 
   .element-video {
     &__post {
+      height: 450px;
+      overflow: hidden;
+
       .item__thumb {
         height: 150px;
       }
     }
+
+    .action-box-see-more {
+      height: 161px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 17.71%, rgba(255, 255, 255, 0) 17.72%, rgba(255, 255, 255, 0.6) 39.14%, #FFFFFF 74.29%);
+    }
+  }
+
+  .element-image-banner {
+    height: 256px;
   }
 
   .service-tabs {
     .nav {
       grid-gap: 30px;
+      max-width: 310px;
+      margin: 0 auto 32px;
 
       .nav-item {
         &:not(:first-child) {

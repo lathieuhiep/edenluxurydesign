@@ -60,12 +60,12 @@
         padding: 0;
         font-size: 22px;
         font-weight: 700;
-        color: $color-title;
+        color: #797979;
         text-transform: uppercase;
 
         &.active,
         &:hover {
-          color: #797979;
+          color: $color-title;
           background-color: transparent;
         }
       }
