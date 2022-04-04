@@ -136,22 +136,20 @@
         }
 
         // show content post
-        const postContentText = $('.height-content-see-more');
-        if ( postContentText.length ) {
-            const heightPostContent = postContentText[0].scrollHeight;
+        $('.add-view-post').on('click', function (event) {
+            event.preventDefault();
 
-            $('.add-view-post').on('click', function (event) {
-                event.preventDefault();
+            const heightContent = $(this).closest('.has-btn-add-view').find('.height-content-see-more');
+            const getHeightContent = heightContent.prop("scrollHeight");
 
-                postContentText.animate({
-                    'height': heightPostContent
-                }, 400, function () {
-                    postContentText.css('height','auto');
-                });
+            heightContent.animate({
+                'height': getHeightContent
+            }, 400, function () {
+                heightContent.css('height','auto');
+            });
 
-                $(this).closest('.action-box-see-more').remove();
-            })
-        }
+            $(this).closest('.action-box-see-more').remove();
+        })
 
         // Project Feature Gallery
         const projectFeatureGallery = $('.project-feature-gallery');
